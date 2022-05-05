@@ -1,0 +1,6 @@
+.DS_Store
+ProjectClient/node_modules
+ProjectManagement/node_modules
+*.zip
+# Editor directories and files
+.vscode

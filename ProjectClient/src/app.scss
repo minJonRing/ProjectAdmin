@@ -1,0 +1,26 @@
+html,
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+.card {
+  padding: 9px;
+
+  .card-box {
+    border-radius: 8px;
+    border: 1px solid #ebeef5;
+    background-color: #fff;
+    overflow: hidden;
+    color: #303133;
+    transition: 0.3s;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    padding: 9px;
+  }
+}
