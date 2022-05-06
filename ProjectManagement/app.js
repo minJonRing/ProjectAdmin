@@ -1,35 +1,44 @@
-var app = require('koa')()
-  , logger = require('koa-logger')
-  , json = require('koa-json')
-  , views = require('koa-views')
-  , onerror = require('koa-onerror')
-  , ejs = require('ejs');
+const Koa = require('koa')
+const app = new Koa()
+const views = require('koa-views')
+const json = require('koa-json')
+const onerror = require('koa-onerror')
+const bodyParser = require('koa-bodyparser')
+const logger = require('koa-logger')
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+// 路由
+const index = require('./routes/index');
+const users = require('./routes/users');
+// 文件上传
+const upload = require('./routes/upload/index')
 
 // error handler
-onerror(app);
+onerror(app)
 
-// global middlewares
+// middlewares
+app.use(bodyParser({
+  enableTypes: ['json', 'form', 'text']
+}))
+app.use(json())
+app.use(logger())
+app.use(require('koa-static')(__dirname + '/public'))
+
 app.use(views(__dirname + '/views', {
   map: { html: 'ejs' }
 }))
-app.use(require('koa-bodyparser')());
-app.use(json());
-app.use(logger());
 
-app.use(function* (next) {
-  var start = new Date;
-  yield next;
-  var ms = new Date - start;
-  console.log('%s %s - %s', this.method, this.url, ms);
-});
+// logger
+app.use(async (ctx, next) => {
+  const start = new Date()
+  await next()
+  const ms = new Date() - start
+  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+})
 
-app.use(require('koa-static')(__dirname + '/public'));
-
-
-// routes definition
+// routes
+// 文件上传
+app.use(upload.routes(), upload.allowedMethods())
+// 页面路径
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
 
@@ -38,4 +47,4 @@ app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
 });
 
-module.exports = app;
+module.exports = app
