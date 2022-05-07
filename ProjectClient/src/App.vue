@@ -1,8 +1,8 @@
-<script setup>
+<script>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import { computed } from "vue";
-import user from "@/assets/user.jpg";
+import { useStore } from "vuex";
+import avatar from "@/assets/user.jpg";
 import {
   User,
   Plus,
@@ -12,14 +12,30 @@ import {
   SwitchButton,
 } from "@element-plus/icons-vue";
 
-const handleOut = () => {
-  console.log(1);
+export default {
+  name: "App",
+  setup() {
+    const store = useStore();
+    const userInfo = store.state.user.userInfo;
+    const handleOut = () => {
+      console.log(1);
+    };
+    return {
+      // 图标
+      User,
+      Plus,
+      Search,
+      Star,
+      CircleCheckFilled,
+      SwitchButton,
+      //
+      userInfo,
+      avatar,
+      // 退出登录
+      handleOut,
+    };
+  },
 };
-const app = computed(() => {
-  return {
-    user,
-  };
-});
 </script>
 
 <template>
@@ -28,10 +44,15 @@ const app = computed(() => {
       <el-card shadow="always" :body-style="{ padding: '18px' }">
         <!-- 头像 用户信息 -->
         <el-space size="large" class="user">
-          <el-avatar shape="square" :size="80" fit="cover" :src="user" />
+          <el-avatar
+            shape="square"
+            :size="80"
+            fit="cover"
+            :src="userInfo?.avatar || avatar"
+          />
           <div class="user-info">
             <el-tag>前端</el-tag>
-            <div>小橘子狐狸</div>
+            <div>{{ userInfo.name }}</div>
           </div>
         </el-space>
         <!-- 项目进程 -->

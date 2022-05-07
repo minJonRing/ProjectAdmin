@@ -1,18 +1,32 @@
-<script setup>
+<script>
 import Info from "./info.vue";
-import { reactive, ref } from "vue";
+import { ref } from "vue";
 
-// do not use same name with ref
-const search = reactive({
-  username: "",
-  name: "",
-});
+export default {
+  name: "User",
+  components: {
+    Info,
+  },
+  setup() {
+    // do not use same name with ref
+    const search = ref({
+      username: "",
+      name: "",
+    });
+    const infoRef = ref(null);
+    const dialogVisible = ref(false);
+    const handleSubmit = () => {
+      infoRef.value.returnData();
+    };
 
-const onSubmit = () => {
-  console.log("submit!");
+    return {
+      infoRef,
+      search,
+      dialogVisible,
+      handleSubmit,
+    };
+  },
 };
-
-const dialogVisible = ref(false);
 </script>
 
 <template>
@@ -45,13 +59,11 @@ const dialogVisible = ref(false);
       :total="500"
     />
     <el-dialog v-model="dialogVisible" title="用户" width="600px">
-      <Info />
+      <Info ref="infoRef" :id="1" />
       <template #footer>
         <span class="dialog-footer">
           <el-button @click="dialogVisible = false">取消</el-button>
-          <el-button type="primary" @click="dialogVisible = false">
-            确认
-          </el-button>
+          <el-button type="primary" @click="handleSubmit"> 确认 </el-button>
         </span>
       </template>
     </el-dialog>

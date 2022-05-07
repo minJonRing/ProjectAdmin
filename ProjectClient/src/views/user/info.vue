@@ -1,18 +1,38 @@
-<script setup>
-import Info from "./info.vue";
+<script>
+import Upload from "@/views/upload/index.vue";
 import { reactive } from "vue";
-
+import { rulesT } from "tqr";
+import { userType } from "@/zd";
 // do not use same name with ref
-const form = reactive({
-  username: "",
-  password: "",
-  name: "",
-  type: "",
-  avatar: "",
-});
-
-const onSubmit = () => {
-  console.log("submit!");
+export default {
+  name: "User",
+  props: {
+    id: rulesT.Number,
+  },
+  components: {
+    Upload,
+  },
+  setup(props) {
+    const { id } = props;
+    // 用户信息
+    let form = reactive({
+      username: "",
+      password: "",
+      name: "",
+      type: [],
+      avatar: "",
+    });
+    // 返回用户的数据
+    const returnData = () => {
+      return form.value;
+    };
+    return {
+      // 数据
+      userType,
+      form,
+      returnData,
+    };
+  },
 };
 </script>
 
@@ -28,15 +48,21 @@ const onSubmit = () => {
       <el-input v-model="form.name" placeholder="请输入" />
     </el-form-item>
     <el-form-item label="类型">
-      <el-input v-model="form.type" placeholder="请输入" />
+      <el-checkbox-group v-model="form.type">
+        <el-checkbox
+          v-for="item in userType"
+          :key="item.value"
+          :label="item.value"
+        >
+          {{ item.label }}
+        </el-checkbox>
+      </el-checkbox-group>
     </el-form-item>
     <el-form-item label="头像">
-      <el-input v-model="form.avatar" placeholder="请输入" />
+      <Upload url="/upload/img" />
     </el-form-item>
   </el-form>
 </template>
 
 <style lang="scss" scoped>
-.info {
-}
 </style>

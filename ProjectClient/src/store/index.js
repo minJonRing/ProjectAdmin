@@ -7,7 +7,7 @@ for (let path in modulesFiles) {
   const key = path.replace(/.+(?=\/)|(\/)|(\.ts)/g, '')
   modules[key] = modulesFiles[path].default
 }
-
+console.log(modules)
 const store = new Vuex.Store({
   modules,
   getters

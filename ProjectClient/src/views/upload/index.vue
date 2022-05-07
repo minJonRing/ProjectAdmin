@@ -36,7 +36,7 @@
           <template #error>
             <div class="image-slot">
               <a class="tip-text" :href="i.filePath" target="_blank">
-                {{ `点击下载《${i.fileName}》` || "未上传" }}
+                {{ `点击下载` }}
               </a>
               <i class="el-icon-picture-outline"></i>
             </div>
@@ -59,19 +59,19 @@
 
 <script>
 import ajax from "@/request/index";
-import { mapActions } from "vuex";
 import { rulesT } from "tqr";
 import { ElNotification } from "element-plus";
 import { isArray } from "lodash";
 import { UploadFilled } from "@element-plus/icons-vue";
-export default {
+import { defineComponent } from "vue-demi";
+export default defineComponent({
   name: "Upload",
   props: {
     url: rulesT.String,
     // 文件类型
     type: {
       type: Array,
-      default: () => ["image", "pdf", "word"],
+      default: () => ["image"],
     },
     // 文件大小
     size: {
@@ -158,7 +158,7 @@ export default {
       return this.files;
     },
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
