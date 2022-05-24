@@ -1,7 +1,7 @@
 <script>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import { useStore } from "vuex";
+import { mapGetters, useStore } from "vuex";
 import avatar from "@/assets/user.jpg";
 import {
   User,
@@ -14,6 +14,9 @@ import {
 
 export default {
   name: "App",
+  computed: {
+    ...mapGetters(["loading"]),
+  },
   setup() {
     const store = useStore();
     const userInfo = store.state.user.userInfo;
@@ -91,7 +94,7 @@ export default {
         </el-space>
       </el-card>
     </el-header>
-    <el-main class="layout-main">
+    <el-main class="layout-main" v-loading="loading">
       <el-card shadow="always" :body-style="{ padding: '18px' }">
         <router-view />
       </el-card>

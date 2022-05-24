@@ -9,7 +9,7 @@ const service = axios.create({
 // request interceptor
 service.interceptors.request.use(
   config => {
-    config.headers['Content-Type'] = 'application/json;charset-UTF-8'
+    config.headers['Content-Type'] = 'application/json'
     return config
   },
   error => {
@@ -34,10 +34,13 @@ service.interceptors.response.use(
     }
   },
   error => {
+    const { response } = JSON.parse(JSON.stringify(error));
+    const { data } = response || {}
+    const { message, status } = data
     // 网络不通，提示信息
     ElMessage({
       type: 'error',
-      message: '网络错误，请联系管理员。',
+      message: message || '网络错误，请联系管理员。',
       showClose: true,
       duration: 5 * 1000
     })

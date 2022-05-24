@@ -1,29 +1,69 @@
 <script>
 import Info from "./info.vue";
-import { ref } from "vue";
-
+import { ref, watch } from "vue";
+import { useSearch, useDetail } from "@/hooks";
+import ajax from "@/request";
+import { userType } from "@/zd";
 export default {
   name: "User",
   components: {
     Info,
   },
   setup() {
-    // do not use same name with ref
-    const search = ref({
-      username: "",
-      name: "",
+    const {
+      search,
+      handleSearch,
+      handleReset,
+      table,
+      pagination,
+      handleCurrentChange,
+      handleSizeChange,
+    } = useSearch({
+      url: "/user",
+      searchParam: {
+        username: "",
+        name: "",
+      },
     });
-    const infoRef = ref(null);
-    const dialogVisible = ref(false);
-    const handleSubmit = () => {
-      infoRef.value.returnData();
-    };
 
+    const { detail, handleDetail, submit } = useDetail("/user/add");
+    // 详情页面
+    const infoRef = ref(null);
+    // 是否显示
+    const dialogVisible = ref(false);
+    // 添加、修改
+    const handleSubmit = () => {
+      infoRef.value.returnData().then((data) => {
+        data &&
+          submit(data).then(() => {
+            handleSearch();
+            dialogVisible.value = false;
+          });
+      });
+    };
+    // 返回用户状态
+    const returnType = (data) => {
+      console.log([...data]);
+      return userType
+        .filter(({ value, label }) => {
+          return [...data].includes(value);
+        })
+        .map(({ label }) => label)
+        .join("，");
+    };
     return {
       infoRef,
       search,
+      handleSearch,
+      handleReset,
+      table,
+      pagination,
+      handleCurrentChange,
+      handleSizeChange,
+      // 添加
       dialogVisible,
       handleSubmit,
+      returnType,
     };
   },
 };
@@ -39,16 +79,24 @@ export default {
         <el-input v-model="search.name" placeholder="请输入" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary">查询</el-button>
+        <el-button type="primary" @click="handleSearch">查询</el-button>
+        <el-button @click="handleReset">重置</el-button>
       </el-form-item>
     </el-form>
     <div class="edits">
       <el-button type="primary" @click="dialogVisible = true">添加</el-button>
     </div>
     <div style="padding: 18px 0">
-      <el-table :data="[]" border stripe>
+      <el-table :data="table" border stripe>
         <el-table-column prop="name" label="用户名" />
-        <el-table-column prop="type" label="类型" />
+        <el-table-column prop="username" label="账号" />
+        <el-table-column prop="type" label="类型">
+          <template #default="{ row }">
+            <div style="display: flex; align-items: center">
+              {{ returnType(row.type) }}
+            </div>
+          </template>
+        </el-table-column>
         <el-table-column label="操作" width="160"></el-table-column>
       </el-table>
     </div>
@@ -56,14 +104,20 @@ export default {
       small
       background
       layout="total, sizes, prev, pager, next, jumper"
-      :total="500"
+      :currentPage="pagination.currentPage"
+      :page-size="pagination.pageSize"
+      :total="pagination.pageTotal"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
     />
     <el-dialog v-model="dialogVisible" title="用户" width="600px">
       <Info ref="infoRef" :id="1" />
       <template #footer>
         <span class="dialog-footer">
           <el-button @click="dialogVisible = false">取消</el-button>
-          <el-button type="primary" @click="handleSubmit"> 确认 </el-button>
+          <el-button type="primary" @click.stop="handleSubmit">
+            确认
+          </el-button>
         </span>
       </template>
     </el-dialog>

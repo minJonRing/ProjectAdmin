@@ -1,11 +1,20 @@
 const Koa = require('koa')
 const app = new Koa()
+const Router = require('koa-router');
+const router = new Router();
 const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyParser = require('koa-bodyparser')
 const logger = require('koa-logger')
+// 数据库
+const mongoose = require("mongoose")
+// mongoose.set('useCreateIndex', true)
+mongoose.connect("mongodb://localhost:27017/projectAdmin");
 
+mongoose.connection.on("open", function () {
+  console.log("mongodb connection success!")
+})
 // 路由
 const index = require('./routes/index');
 const users = require('./routes/users');
@@ -34,7 +43,11 @@ app.use(async (ctx, next) => {
   const ms = new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
-
+router.post('/post', async (ctx, next) => {
+  console.log(ctx.request.body)
+  ctx.response.body = ctx.request.body
+});
+app.use(router.routes());
 // routes
 // 文件上传
 app.use(upload.routes(), upload.allowedMethods())
