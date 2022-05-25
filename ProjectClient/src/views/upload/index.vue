@@ -15,7 +15,7 @@
       <el-icon class="el-upload-icon"><UploadFilled /></el-icon>
     </el-upload>
     <template v-if="!read">
-      <div v-for="(i, j) in files" :key="j" class="item">
+      <div v-for="(i, j) in fileList" :key="j" class="item">
         <el-popconfirm
           v-if="!read"
           placement="top"
@@ -31,7 +31,7 @@
         <el-image
           :src="i.filePath"
           fit="cover"
-          :preview-src-list="files.map(({ filePath }) => filePath)"
+          :preview-src-list="fileList.map(({ filePath }) => filePath)"
         >
           <template #error>
             <div class="image-slot">
@@ -61,66 +61,69 @@
 import ajax from "@/request/index";
 import { rulesT } from "tqr";
 import { ElNotification } from "element-plus";
-import { isArray } from "lodash";
 import { UploadFilled } from "@element-plus/icons-vue";
 import { defineComponent } from "vue-demi";
 export default defineComponent({
   name: "Upload",
   props: {
+    // 文件列表
+    modelValue: rulesT.Array,
+    // 上传地址
     url: rulesT.String,
     // 文件类型
-    type: {
-      type: Array,
-      default: () => ["image"],
-    },
+    type: rulesT.Array,
     // 文件大小
     size: {
       type: Number,
       default: 80,
     },
-    // 文件列表
-    fileList: rulesT.Array,
     // 是否只读
     read: rulesT.Boolean,
-    //
+    // 最大文件数
     limit: {
       type: Number,
       default: 99,
     },
+    // 是否是单文件
+    one: rulesT.Boolean,
+    // 是否值需要文件地址
+    isPath: rulesT.Boolean,
     // 对返回的数据进行处理 {fileName,filePath}
     filterData: rulesT.Function,
   },
+  model: {
+    prop: "modelValue",
+    event: "change",
+  },
   components: {
     UploadFilled,
+  },
+  computed: {
+    fileList: {
+      get: function ({ modelValue }) {
+        return [...modelValue];
+      },
+      set: function (data) {
+        this.$emit("update:modelValue", data);
+      },
+    },
   },
   data() {
     return {
       loading: false,
       progress: 0,
-      files: [],
     };
-  },
-  watch: {
-    fileList(data) {
-      if (data && isArray(data)) {
-        this.files = [...data];
-      }
-    },
-  },
-  created() {
-    if (this.fileList && this.fileList.length) {
-      this.files = [...this.fileList];
-    }
   },
   methods: {
     beforeAvatarUpload(file) {
-      const isType =
-        this.type.filter((i) => {
-          return (
-            new RegExp(i).test(file.type) ||
-            i === file.name.replace(/.+(?=\.)|\./g, "")
-          );
-        }).length > 0;
+      const isType = this.type.length
+        ? this.type.filter((i) => {
+            return (
+              new RegExp(i).test(file.type) ||
+              i === file.name.replace(/.+(?=\.)|\./g, "")
+            );
+          }).length > 0
+        : true;
       const isSize = file.size / 1024 / 1024 < this.size;
       if (!isType) {
         ElNotification.error(`请上传格式正确的文件,${this.type.join(",")}!`);
@@ -144,18 +147,21 @@ export default defineComponent({
         },
       })
         .then(({ data }) => {
-          this.files.push(...data);
-          // console.log(this.files, data);
+          if (this.one) {
+            this.fileList = data;
+          } else {
+            this.fileList.push(...data);
+          }
         })
         .finally(() => {
           this.loading = false;
         });
     },
     handleDelete(i) {
-      this.files.splice(i, 1);
+      this.fileList.splice(i, 1);
     },
     returnData() {
-      return this.files;
+      return this.fileList;
     },
   },
 });

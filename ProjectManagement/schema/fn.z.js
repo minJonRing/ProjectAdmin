@@ -1,16 +1,16 @@
 const getAll = async function (sort = { 'id': -1 }) {
-  return new Promise((r, reject) => {
+  return new Promise((resolev, reject) => {
     this.find({ isDelete: false })
       .sort(sort)
       .exec((err, doc) => {
         try {
           if (!err && doc) {
-            r({ code: 200, msg: '数据请求成功', data: doc })
+            resolev({ code: 200, msg: '数据请求成功', data: doc })
           } else {
-            r({ code: 200, msg: err, data: doc })
+            resolev({ code: 200, msg: err, data: doc })
           }
         } catch (e) {
-          r({ code: 200, msg: e, data: '' })
+          resolev({ code: 200, msg: e, data: '' })
         }
       })
 
@@ -18,7 +18,6 @@ const getAll = async function (sort = { 'id': -1 }) {
 }
 
 const getList = async function (option, handle) {
-  const { currentPage, pageSize } = option
   let { filter, sort } = handle || {}
   filter = { ...filter, isDelete: false }
   sort = { ...sort, 'id': -1 }
@@ -26,8 +25,8 @@ const getList = async function (option, handle) {
     this.countDocuments(filter).exec((err, len) => {
       try {
         if (!err) {
-          this.find(filter).skip((currentPage - 1) * pageSize)
-            .limit(pageSize - 0)
+          this.find(filter).skip((option.currentPage - 1) * option.pageSize)
+            .limit(option.pageSize - 0)
             .sort(sort)
             .exec((err, doc) => {
               try {
@@ -51,27 +50,26 @@ const getList = async function (option, handle) {
   })
 }
 
-const getDetail = async function (option) {
-  const { id } = option
-  return new Promise((r, reject) => {
+const getOne = async function (option) {
+  return new Promise((resolev, reject) => {
     this.findOne({
-      id
+      id: option.id
     })
       .exec((err, doc) => {
         try {
           if (!err && doc) {
-            r({ status: 200, msg: '数据请求成功', data: doc })
+            resolev({ code: 200, msg: '数据请求成功', data: doc })
           } else {
-            r({ status: 203, msg: err, data: doc })
+            resolev({ code: 200, msg: err, data: doc })
           }
         } catch (e) {
-          r({ status: 203, msg: e, data: '' })
+          resolev({ code: 200, msg: e, data: '' })
         }
       })
   })
 }
 
-const addOne = async function (option) {
+const add = async function (option) {
   const len = await new Promise((r, reject) => {
     this.find({}).exec((err, doc) => {
       try {
@@ -107,34 +105,16 @@ const addOne = async function (option) {
 
 
 const updateOne = async function (option) {
-  const { id } = option
-  return new Promise((r, reject) => {
-    this.update({ id }, option).exec((err, doc) => {
+  return new Promise((resolev, reject) => {
+    this.update({ id: option.id }, option).exec((err, doc) => {
       try {
         if (!err && doc) {
-          r({ status: 200, msg: '更新成功', data: doc })
+          resolev({ code: 200, msg: '更新成功', data: '' })
         } else {
-          r({ status: 203, msg: err, data: '' })
+          resolev({ code: 200, msg: err, data: '' })
         }
       } catch (e) {
-        r({ status: 203, msg: e, data: '' })
-      }
-    })
-  })
-}
-
-const deleteOne = async function (option) {
-  const { id } = option
-  return new Promise((r, reject) => {
-    this.update({ id }, { isDelete: true }).exec((err, doc) => {
-      try {
-        if (!err && doc) {
-          r({ status: 200, msg: '更新成功', data: doc })
-        } else {
-          r({ status: 203, msg: err, data: '' })
-        }
-      } catch (e) {
-        r({ status: 203, msg: e, data: '' })
+        resolev({ code: 200, msg: e, data: '' })
       }
     })
   })
@@ -142,10 +122,9 @@ const deleteOne = async function (option) {
 
 
 module.exports = {
-  getAll,
-  getList,
-  getDetail,
-  addOne,
-  updateOne,
-  deleteOne
+  getAll: getAll,
+  getList: getList,
+  getOne: getOne,
+  add: add,
+  updateOne: updateOne
 }

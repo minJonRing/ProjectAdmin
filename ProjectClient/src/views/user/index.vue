@@ -1,8 +1,7 @@
 <script>
 import Info from "./info.vue";
-import { ref, watch } from "vue";
-import { useSearch, useDetail } from "@/hooks";
-import ajax from "@/request";
+import { ref } from "vue";
+import { useSearch } from "@/hooks";
 import { userType } from "@/zd";
 export default {
   name: "User",
@@ -10,11 +9,14 @@ export default {
     Info,
   },
   setup() {
+    const userId = ref(null);
+    // 列表查询
     const {
       search,
       handleSearch,
       handleReset,
       table,
+      handleDelete,
       pagination,
       handleCurrentChange,
       handleSizeChange,
@@ -25,38 +27,40 @@ export default {
         name: "",
       },
     });
-
-    const { detail, handleDetail, submit } = useDetail("/user/add");
     // 详情页面
     const infoRef = ref(null);
     // 是否显示
     const dialogVisible = ref(false);
     // 添加、修改
     const handleSubmit = () => {
-      infoRef.value.returnData().then((data) => {
-        data &&
-          submit(data).then(() => {
-            handleSearch();
-            dialogVisible.value = false;
-          });
+      infoRef.value.handleSubmit().then(() => {
+        handleSearch();
+        dialogVisible.value = false;
       });
     };
     // 返回用户状态
     const returnType = (data) => {
-      console.log([...data]);
       return userType
-        .filter(({ value, label }) => {
+        .filter(({ value }) => {
           return [...data].includes(value);
         })
         .map(({ label }) => label)
         .join("，");
     };
+    // 编辑
+    const handleEdit = (data) => {
+      const { id } = data;
+      userId.value = id;
+      dialogVisible.value = true;
+    };
+
     return {
       infoRef,
       search,
       handleSearch,
       handleReset,
       table,
+      handleDelete,
       pagination,
       handleCurrentChange,
       handleSizeChange,
@@ -64,6 +68,9 @@ export default {
       dialogVisible,
       handleSubmit,
       returnType,
+      // 详情
+      userId,
+      handleEdit,
     };
   },
 };
@@ -73,10 +80,10 @@ export default {
   <div class="user">
     <el-form class="search" :model="search" inline>
       <el-form-item label="账号">
-        <el-input v-model="search.username" placeholder="请输入" />
+        <el-input v-model="search.username" clearable placeholder="请输入" />
       </el-form-item>
       <el-form-item label="用户名">
-        <el-input v-model="search.name" placeholder="请输入" />
+        <el-input v-model="search.name" clearable placeholder="请输入" />
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="handleSearch">查询</el-button>
@@ -97,7 +104,16 @@ export default {
             </div>
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="160"></el-table-column>
+        <el-table-column label="操作" width="160">
+          <template #default="{ row }">
+            <el-button type="text" @click="handleEdit(row)">编辑</el-button>
+            <el-popconfirm title="确认删除?" @confirm="handleDelete(row.id)">
+              <template #reference>
+                <el-button type="danger" link> 删除 </el-button>
+              </template>
+            </el-popconfirm>
+          </template>
+        </el-table-column>
       </el-table>
     </div>
     <el-pagination
@@ -111,7 +127,7 @@ export default {
       @current-change="handleCurrentChange"
     />
     <el-dialog v-model="dialogVisible" title="用户" width="600px">
-      <Info ref="infoRef" :id="1" />
+      <Info ref="infoRef" :id="userId" />
       <template #footer>
         <span class="dialog-footer">
           <el-button @click="dialogVisible = false">取消</el-button>

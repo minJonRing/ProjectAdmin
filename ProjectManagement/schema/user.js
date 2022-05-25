@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const { getList, add } = require("./fn");
+const { getList, getDetail, addOne, updateOne, deleteOne } = require("./fn");
 
 let user = new Schema({
   id: { type: Number, required: true, index: true },
@@ -15,18 +15,40 @@ let user = new Schema({
 
 user.statics = {
   getList(option) {
-    const _option = { name: '', ...option }
-    const { name } = _option
+    const _option = { username: '', name: '', ...option }
+    const { username, name } = _option
     const _name = new RegExp(name, 'i') //不区分大小写
+    const _username = new RegExp(username, 'i') //不区分大小写
     let filter = {
       $or: [ //多条件，数组
-        { name: { $regex: _name } },
+        { name: { $regex: _name }, username: { $regex: _username } },
       ],
     }
     return getList.call(this, _option, { filter })
   },
-  add(option) {
-    return add.call(this, option)
+  getDetail(option) {
+    return getDetail.call(this, option)
+  },
+  addOne(option) {
+    return addOne.call(this, option)
+  },
+  updateOne(option) {
+    const {
+      id,
+      name,
+      type,
+      avatar,
+    } = option
+    const _option = {
+      id,
+      name,
+      type,
+      avatar,
+    }
+    return updateOne.call(this, _option)
+  },
+  deleteOne(option) {
+    return deleteOne.call(this, option)
   },
 }
 

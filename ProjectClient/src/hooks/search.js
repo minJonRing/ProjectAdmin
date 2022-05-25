@@ -26,7 +26,7 @@ const useSearch = (param) => {
       ajax({
         url,
         method: 'get',
-        data: { ...search, ...pagination }
+        params: { ...search, ...pagination }
       }).then(({ data }) => {
         let { list, total } = data || {};
         if (isArray(data)) {
@@ -49,6 +49,23 @@ const useSearch = (param) => {
     keys.map(key => search[key] = '')
   }
 
+  // 删除
+  const handleDelete = (id) => {
+    global.loading = true
+    return new Promise((r, j) => {
+      ajax({
+        url: `${url}/${id}`,
+        method: 'delete',
+      }).then(({ data }) => {
+        ElNotification.success('成功')
+        handleSearch()
+        r(data)
+      }).finally(() => {
+        global.loading = false
+      })
+    })
+  }
+
   // 分页-改变当前页
   const handleCurrentChange = (i) => {
     pagination.currentPage = i
@@ -69,7 +86,8 @@ const useSearch = (param) => {
     table,
     pagination,
     handleCurrentChange,
-    handleSizeChange
+    handleSizeChange,
+    handleDelete
   }
 }
 

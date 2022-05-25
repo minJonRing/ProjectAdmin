@@ -1,20 +1,21 @@
-import { ref } from "vue";
 import ajax from '@/request'
 import global from '@/global'
 import { ElNotification } from 'element-plus'
 const useDetail = (url) => {
-  let detail = ref({})
-  const handleDetail = (data) => {
+
+  const handleDetail = (id) => {
     global.loading = true
-    ajax({
-      url,
-      method: 'get',
-      data
-    }).then(({ data }) => {
-      detail = data
-    }).finally(() => {
-      global.loading = false
+    return new Promise((r, j) => {
+      ajax({
+        url: `${url}/${id}`,
+        method: 'get',
+      }).then(({ data }) => {
+        r(data)
+      }).finally(() => {
+        global.loading = false
+      })
     })
+
   }
 
   const submit = (data) => {
@@ -35,7 +36,6 @@ const useDetail = (url) => {
   }
 
   return {
-    detail,
     handleDetail,
     submit
   }

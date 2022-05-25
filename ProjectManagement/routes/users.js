@@ -7,9 +7,24 @@ router.get('/', async (ctx, next) => {
   const data = await user.getList(ctx.query)
   ctx.body = data
 })
-router.post('/add', async (ctx, next) => {
+router.get('/:id', async (ctx, next) => {
   await next()
-  const data = await user.add(ctx.request.body)
+  const data = await user.getDetail(ctx.params)
+  ctx.body = data
+})
+router.post('/', async (ctx, next) => {
+  await next()
+  const data = await user.addOne(ctx.request.body)
+  ctx.body = data
+})
+router.put('/:id', async (ctx, next) => {
+  await next()
+  const data = await user.updateOne(ctx.request.body)
+  ctx.body = data
+})
+router.delete('/:id', async (ctx, next) => {
+  await next()
+  const data = await user.deleteOne(ctx.params)
   ctx.body = data
 })
 

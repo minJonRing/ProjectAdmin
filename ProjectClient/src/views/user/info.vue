@@ -1,8 +1,9 @@
 <script>
 import Upload from "@/views/upload/index.vue";
-import { reactive, ref } from "vue";
+import { watch, onMounted, reactive, ref } from "vue";
 import { rulesT, blur, change } from "tqr";
 import { userType } from "@/zd";
+import { useDetail } from "@/hooks";
 // do not use same name with ref
 export default {
   name: "User",
@@ -13,8 +14,6 @@ export default {
     Upload,
   },
   setup(props) {
-    const { id } = props;
-    const formRef = ref(null);
     // 用户信息
     let form = reactive({
       username: "",
@@ -27,11 +26,11 @@ export default {
     const rules = reactive({
       username: [
         blur,
-        { min: 5, max: 10, message: "长度在5-10之间", trigger: "blur" },
+        { min: 2, max: 10, message: "长度在5-10之间", trigger: "blur" },
       ],
       password: [
         blur,
-        { min: 6, max: 16, message: "长度在6-16之间", trigger: "blur" },
+        { min: 6, max: 10, message: "长度在6-16之间", trigger: "blur" },
       ],
       name: [
         blur,
@@ -39,14 +38,47 @@ export default {
       ],
       type: change,
     });
+
+    const { handleDetail, submit } = useDetail("/user");
+
+    watch(props, (newProps) => {
+      handleDetail(newProps.id).then((data) => {
+        const keys = Object.keys(data);
+        keys.map((key) => (form[key] = data[key]));
+        form.avatar = form.avatar
+          ? [{ fileName: "", filePath: data.avatar }]
+          : [];
+      });
+    });
+
+    onMounted(() => {
+      const { id } = props;
+      id &&
+        handleDetail(id).then((data) => {
+          const keys = Object.keys(data);
+          keys.map((key) => (form[key] = data[key]));
+          form.avatar = form.avatar
+            ? [{ fileName: "", filePath: data.avatar }]
+            : [];
+        });
+    });
+
+    const formRef = ref(null);
+
     // 返回用户的数据
-    const returnData = () => {
+    const handleSubmit = () => {
       return new Promise((r, j) => {
         formRef.value.validate((valid, fields) => {
           if (valid) {
-            r(form);
+            const { avatar } = form;
+            submit({
+              ...form,
+              avatar: avatar.length ? avatar[0].filePath : "",
+            }).then((data) => {
+              r(data);
+            });
           } else {
-            console.log("表单验证失败!");
+            console.log("表单验证失败!", fields);
             j("表单验证失败!");
           }
         });
@@ -58,20 +90,14 @@ export default {
       formRef,
       form,
       rules,
-      returnData,
+      handleSubmit,
     };
   },
 };
 </script>
 
 <template>
-  <el-form
-    class="info"
-    ref="formRef"
-    :model="form"
-    :rules="rules"
-    label-width="80px"
-  >
+  <el-form ref="formRef" :model="form" :rules="rules" label-width="80px">
     <el-form-item label="账号" prop="username">
       <el-input v-model="form.username" placeholder="请输入" />
     </el-form-item>
@@ -93,7 +119,7 @@ export default {
       </el-checkbox-group>
     </el-form-item>
     <el-form-item label="头像">
-      <Upload url="/upload/img" />
+      <Upload v-model="form.avatar" url="/upload/img" one />
     </el-form-item>
   </el-form>
 </template>
