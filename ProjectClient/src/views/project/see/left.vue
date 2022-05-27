@@ -25,15 +25,18 @@ export default {
           const { personnel } = data;
           form.value = {
             ...data,
-            personnel: userType.map((i) => {
-              const children = personnel.filter(({ type }) => type == i.value);
-              return {
-                ...i,
-                children,
-              };
-            }),
+            personnel: userType
+              .map((i) => {
+                const children = personnel.filter(({ type }) =>
+                  type.includes(i.value)
+                );
+                return {
+                  ...i,
+                  children,
+                };
+              })
+              .filter(({ children }) => !!children.length),
           };
-          console.log(form.value);
         });
     });
 
@@ -52,12 +55,12 @@ export default {
       fit="cover"
     />
     <div class="name">{{ form.name }}</div>
-    <div class="time">{{ form.developTime.join(" 至 ") }}</div>
-    <div v-for="(i, j) in form.personnel" :key="j">
+    <div class="time">项目时间：{{ form.developTime.join(" 至 ") }}</div>
+    <el-divider />
+    <div v-for="(i, j) in form.personnel" :key="j" class="personnel">
       <el-tag :type="i.type">{{ i.label }}</el-tag>
-      <div>
+      <div class="item">
         <el-card
-          class="personnel"
           v-for="(x, y) in i.children"
           :key="y"
           shadow="always"
@@ -68,7 +71,7 @@ export default {
             :src="x.avatar || ''"
             fit="cover"
           />
-          <div>{{ x.name }}</div>
+          <div class="personnel-name">{{ x.name }}</div>
         </el-card>
       </div>
     </div>
@@ -79,18 +82,44 @@ export default {
 .project-left {
   .avatar {
     width: 100%;
+    max-height: 140px;
   }
   .name {
     text-align: center;
     font-size: 16px;
     line-height: 1.6;
     font-weight: 600;
-    padding: 18px 0;
+    padding: 9px 0;
   }
   .time {
     text-align: center;
     font-size: 14px;
     line-height: 1.6;
+  }
+  .el-divider {
+    margin: 12px;
+  }
+  .personnel {
+    padding: 6px 0;
+    .el-tag {
+      margin-bottom: 12px;
+    }
+    .item {
+      display: flex;
+      flex-wrap: wrap;
+      .el-card {
+        margin-right: 12px;
+        .el-image {
+          display: block;
+        }
+        .personnel-name {
+          line-height: 1;
+          padding: 3px;
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 </style>
