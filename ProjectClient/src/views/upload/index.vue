@@ -150,7 +150,9 @@ export default defineComponent({
           if (this.one) {
             this.fileList = data;
           } else {
-            this.fileList.push(...data);
+            const list = JSON.parse(JSON.stringify(this.fileList));
+            list.push(...data);
+            this.fileList = list;
           }
         })
         .finally(() => {
@@ -158,7 +160,9 @@ export default defineComponent({
         });
     },
     handleDelete(i) {
-      this.fileList.splice(i, 1);
+      const list = JSON.parse(JSON.stringify(this.fileList));
+      list.splice(i, 1);
+      this.fileList = list;
     },
     returnData() {
       return this.fileList;

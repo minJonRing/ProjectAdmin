@@ -66,13 +66,10 @@ export default {
                 <el-button :icon="User" />
               </el-tooltip>
             </router-link>
-            <router-link class="item" to="/project/add">
-              <el-tooltip content="新增项目" placement="top" effect="light">
-                <el-button :icon="Plus" />
-              </el-tooltip>
-            </router-link>
             <el-badge :value="12" class="item">
-              <el-button :icon="Search">全部项目</el-button>
+              <router-link to="/project/list">
+                <el-button :icon="Search"> 全部项目 </el-button>
+              </router-link>
             </el-badge>
             <el-badge :value="12" class="item">
               <el-button type="primary" :icon="Star">进行中项目</el-button>

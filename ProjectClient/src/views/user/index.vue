@@ -109,7 +109,7 @@ export default {
             <el-button type="text" @click="handleEdit(row)">编辑</el-button>
             <el-popconfirm title="确认删除?" @confirm="handleDelete(row.id)">
               <template #reference>
-                <el-button type="danger" link> 删除 </el-button>
+                <el-button class="delete-btn" type="text"> 删除 </el-button>
               </template>
             </el-popconfirm>
           </template>

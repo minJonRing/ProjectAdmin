@@ -18,6 +18,7 @@ mongoose.connection.on("open", function () {
 // 路由
 const index = require('./routes/index');
 const users = require('./routes/users');
+const project = require('./routes/project');
 // 文件上传
 const upload = require('./routes/upload/index')
 
@@ -54,6 +55,7 @@ app.use(upload.routes(), upload.allowedMethods())
 // 页面路径
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
+app.use(project.routes(), project.allowedMethods());
 
 // error-handling
 app.on('error', (err, ctx) => {

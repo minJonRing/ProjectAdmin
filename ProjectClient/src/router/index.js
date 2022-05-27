@@ -20,11 +20,19 @@ const routes = [
   {
     path: '/project',
     name: 'Project',
-    component: () => import('@/views/child/index.vue'),
+    component: () => import('@/views/index.vue'),
     meta: {
       title: '项目'
     },
     children: [
+      {
+        path: 'list',
+        name: 'ProjectList',
+        component: () => import('@/views/project/index.vue'),
+        meta: {
+          title: '添加项目'
+        }
+      },
       {
         path: 'add',
         name: 'ProjectAdd',
