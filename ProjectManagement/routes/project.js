@@ -1,7 +1,10 @@
 const router = require('koa-router')()
-const project = require('../schema/project')
+const project = require('../schema/project/index')
+const projectItem = require('../schema/project/item')
+const question = require('../schema/project/question')
 router.prefix('/project')
 
+// 项目
 router.get('/', async (ctx, next) => {
   await next()
   const data = await project.getList(ctx.query)
@@ -28,4 +31,58 @@ router.delete('/:id', async (ctx, next) => {
   ctx.body = data
 })
 
+// 项目-小项
+router.get('/item', async (ctx, next) => {
+  await next()
+  const data = await projectItem.getList(ctx.query)
+  ctx.body = data
+})
+router.get('/item/:id', async (ctx, next) => {
+  await next()
+  const data = await projectItem.getDetail(ctx.params)
+  ctx.body = data
+})
+router.post('/item', async (ctx, next) => {
+  await next()
+  const data = await projectItem.addOne(ctx.request.body)
+  ctx.body = data
+})
+router.put('/item/:id', async (ctx, next) => {
+  await next()
+  const data = await projectItem.updateOne(ctx.request.body)
+  ctx.body = data
+})
+router.delete('/item/:id', async (ctx, next) => {
+  await next()
+  const data = await projectItem.deleteOne(ctx.params)
+  ctx.body = data
+})
+
+
+// 项目-问题
+router.get('/question', async (ctx, next) => {
+  await next()
+  const data = await question.getList(ctx.query)
+  ctx.body = data
+})
+router.get('/question/:id', async (ctx, next) => {
+  await next()
+  const data = await question.getDetail(ctx.params)
+  ctx.body = data
+})
+router.post('/question', async (ctx, next) => {
+  await next()
+  const data = await question.addOne(ctx.request.body)
+  ctx.body = data
+})
+router.put('/question/:id', async (ctx, next) => {
+  await next()
+  const data = await question.updateOne(ctx.request.body)
+  ctx.body = data
+})
+router.delete('/question/:id', async (ctx, next) => {
+  await next()
+  const data = await question.deleteOne(ctx.params)
+  ctx.body = data
+})
 module.exports = router
