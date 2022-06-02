@@ -108,7 +108,12 @@ export default {
   .layout-head {
     height: auto;
     padding: 12px;
+
     .el-card {
+      background-image: url("./assets/banner.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
       ::v-deep(.el-card__body) {
         display: flex;
         align-items: center;

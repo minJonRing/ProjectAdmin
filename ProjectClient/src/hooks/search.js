@@ -21,7 +21,7 @@ const useSearch = (param) => {
   })
   // 查询
   const handleSearch = () => {
-    global.loading = true
+    global.loading = true;
     return new Promise((r, j) => {
       ajax({
         url,

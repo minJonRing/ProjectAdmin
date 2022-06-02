@@ -5,6 +5,7 @@ import { blur, change } from "tqr";
 import { useDetail, useSearch } from "@/hooks";
 import { useRoute, useRouter } from "vue-router";
 import { Upload } from "@element-plus/icons-vue";
+import UploadFile from "@/views/upload/index.vue";
 export default {
   name: "info",
   props: {
@@ -12,13 +13,17 @@ export default {
   },
   components: {
     Upload,
+    UploadFile,
   },
   setup(props) {
     const {
       questionIds: { itemId, projectId },
     } = props;
-    console.log(itemId, projectId);
-    const { handleDetail, submit } = useDetail("/project/question");
+
+    // 页面显示
+    const addScreen = ref(false);
+
+    const { handleDetail, submit } = useDetail("/project/question/path");
     const {
       search,
       handleSearch,
@@ -29,7 +34,7 @@ export default {
       handleSizeChange,
       handleDelete,
     } = useSearch({
-      url: "/project/question",
+      url: "/project/question/path",
       searchParam: {
         projectId,
         name: "",
@@ -46,9 +51,7 @@ export default {
       name: "",
       describe: "",
       treat: "",
-      propose: "",
-      solve: "",
-      confirm: "",
+      fileList: [],
       status: 0,
     });
 
@@ -58,23 +61,37 @@ export default {
       treat: blur,
     });
 
-    const handleSee = (data) => {};
+    const handleSee = (data) => {
+      form.value = data;
+      addScreen.value = true;
+    };
 
     const handleSubmit = () => {
       formRef.value.validate((valid, fields) => {
         if (valid) {
-          console.log(form.value);
-          return;
-          submit({
+          const personnel = ["propose", "solve", "confirm"][form.value.status];
+          const data = {
             ...form.value,
+            [personnel]: "629068c83f517a3de6d77310",
+          };
+          submit(data).then(() => {
+            form.value = {
+              itemId,
+              projectId,
+              name: "",
+              describe: "",
+              treat: "",
+              fileList: [],
+              status: 0,
+            };
+            handleSearch();
           });
         } else {
           console.log("表单验证失败!", fields);
         }
       });
     };
-    // 页面显示
-    const addScreen = ref(false);
+
     // 挂载完成
     onMounted(() => {});
     // 添加项目
@@ -118,13 +135,29 @@ export default {
       <el-table :data="table" border stripe>
         <el-table-column type="index" width="50" />
         <el-table-column prop="name" label="名称" />
-        <el-table-column prop="status" label="状态" width="80" />
-        <el-table-column prop="propose" label="提出人" />
-        <el-table-column prop="solve" label="修改人" />
-        <el-table-column prop="confirm" label="确认人" />
+        <el-table-column prop="status" label="状态" width="80">
+          <template #default="{ row: { status } }">
+            {{ ["待修改", "待确认", "修改完成"][status] }}
+          </template>
+        </el-table-column>
+        <el-table-column prop="propose" label="提出人">
+          <template #default="{ row: { propose } }">
+            {{ propose?.name }}
+          </template>
+        </el-table-column>
+        <el-table-column prop="solve" label="修改人">
+          <template #default="{ row: { solve } }">
+            {{ solve?.name }}
+          </template>
+        </el-table-column>
+        <el-table-column prop="confirm" label="确认人">
+          <template #default="{ row: { confirm } }">
+            {{ confirm?.name }}
+          </template>
+        </el-table-column>
         <el-table-column label="操作">
           <template #default="{ row }">
-            <el-button type="text" @click="handleSee(row)">查看</el-button>
+            <el-button type="text" @click.stop="handleSee(row)">查看</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -167,6 +200,9 @@ export default {
             placeholder="请输入"
             clearable
           />
+        </el-form-item>
+        <el-form-item label="附件" prop="fileList">
+          <UploadFile v-model="form.fileList" url="/upload/img" />
         </el-form-item>
         <el-form-item v-if="form.status == 1" label="处理方法" prop="treat">
           <el-input

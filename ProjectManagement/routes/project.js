@@ -12,6 +12,7 @@ router.get('/', async (ctx, next) => {
 })
 router.get('/:id', async (ctx, next) => {
   await next()
+  console.log(1)
   const data = await project.getDetail(ctx.params)
   ctx.body = data
 })
@@ -60,27 +61,27 @@ router.delete('/item/:id', async (ctx, next) => {
 
 
 // 项目-问题
-router.get('/question', async (ctx, next) => {
+router.get('/question/path', async (ctx, next) => {
   await next()
   const data = await question.getList(ctx.query)
   ctx.body = data
 })
-router.get('/question/:id', async (ctx, next) => {
+router.get('/question/path/:id', async (ctx, next) => {
   await next()
   const data = await question.getDetail(ctx.params)
   ctx.body = data
 })
-router.post('/question', async (ctx, next) => {
+router.post('/question/path', async (ctx, next) => {
   await next()
   const data = await question.addOne(ctx.request.body)
   ctx.body = data
 })
-router.put('/question/:id', async (ctx, next) => {
+router.put('/question/path/:id', async (ctx, next) => {
   await next()
   const data = await question.updateOne(ctx.request.body)
   ctx.body = data
 })
-router.delete('/question/:id', async (ctx, next) => {
+router.delete('/question/path/:id', async (ctx, next) => {
   await next()
   const data = await question.deleteOne(ctx.params)
   ctx.body = data

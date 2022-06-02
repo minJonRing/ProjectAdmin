@@ -7,6 +7,7 @@
         "watch": [
           "bin",
           "routes",
+          "schema",
           "views"
         ],
         "error_file": "./logs/syq-err.log",

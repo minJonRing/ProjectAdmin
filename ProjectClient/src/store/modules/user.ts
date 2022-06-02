@@ -6,9 +6,9 @@ interface State {
 
 const state = {
   userInfo: {
-    name: '涂乔荣',
-    type: 3,
-    avatar: '/upload/image/9062b0dc7c8186caf43fc5101'
+    name: '',
+    type: '',
+    avatar: ''
   },
 }
 

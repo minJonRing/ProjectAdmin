@@ -9,9 +9,11 @@ let question = new Schema({
   name: { type: String, required: true },
   describe: { type: String, required: true },
   treat: { type: String },
+  fileList: [Object],
   propose: { type: Schema.Types.ObjectId, ref: 'User' },
   solve: { type: Schema.Types.ObjectId, ref: 'User' },
   confirm: { type: Schema.Types.ObjectId, ref: 'User' },
+  status: { type: Number, default: 0 },
   isDelete: { type: Boolean, default: false },
   proposeTime: { type: Date, default: Date.now },
   solveTime: { type: Date, default: Date.now },
@@ -21,17 +23,18 @@ let question = new Schema({
 
 question.statics = {
   getList(option) {
-    const _option = { projectId: '', ...option }
-    const { projectId } = _option
-    let filter = {
+    const _option = { projectId: '', name: '', ...option }
+    const { name, projectId } = _option
+    const _name = new RegExp(name, 'i') //不区分大小写
+    const filter = {
+      $or: [ //多条件，数组
+        { name: { $regex: _name } },
+      ],
       projectId
     }
-    return getList.call(this, _option, { filter })
-  },
-  getDetail(option) {
-    const { id } = option
+    // return getList.call(this, _option, { filter })
     return new Promise((r) => {
-      this.find({ projectId: id }).populate('personnel')
+      this.find(filter).populate([{ path: 'propose' }, { path: 'solve' }, { path: 'confirm' }])
         .sort({ 'id': 1 })
         .exec((err, doc) => {
           try {
@@ -46,6 +49,9 @@ question.statics = {
         })
     })
   },
+  getDetail(option) {
+    return getDetail.call(this, option)
+  },
   addOne(option) {
     return addOne.call(this, option)
   },
@@ -54,17 +60,18 @@ question.statics = {
       id,
       name,
       describe,
-      propose,
-      solve,
-      confirm,
+      treat,
+      fileList,
+      status
     } = option
+    const personnel = ['propose', 'solve', 'confirm'][status]
     const _option = {
       id,
       name,
       describe,
-      propose,
-      solve,
-      confirm,
+      treat,
+      fileList,
+      [personnel]: option[personnel]
     }
     return updateOne.call(this, _option)
   },

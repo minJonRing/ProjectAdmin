@@ -1,0 +1,1601 @@
+2022-06-01 17:04 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:04 +08:00:   errno: -4058,
+2022-06-01 17:04 +08:00:   code: 'ENOENT',
+2022-06-01 17:04 +08:00:   syscall: 'stat',
+2022-06-01 17:04 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:04 +08:00: } {
+2022-06-01 17:04 +08:00:   request: {
+2022-06-01 17:04 +08:00:     method: 'GET',
+2022-06-01 17:04 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:04 +08:00:     header: {
+2022-06-01 17:04 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:04 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:04 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:04 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:04 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:04 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:04 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:04 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:04 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:04 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:04 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:04 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:04 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:04 +08:00:       pragma: 'no-cache',
+2022-06-01 17:04 +08:00:       connection: 'close',
+2022-06-01 17:04 +08:00:       host: 'localhost:4000'
+2022-06-01 17:04 +08:00:     }
+2022-06-01 17:04 +08:00:   },
+2022-06-01 17:04 +08:00:   response: {
+2022-06-01 17:04 +08:00:     status: 404,
+2022-06-01 17:04 +08:00:     message: 'Not Found',
+2022-06-01 17:04 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:04 +08:00:   },
+2022-06-01 17:04 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:04 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:04 +08:00:   req: '<original node req>',
+2022-06-01 17:04 +08:00:   res: '<original node res>',
+2022-06-01 17:04 +08:00:   socket: '<original node socket>'
+2022-06-01 17:04 +08:00: }
+2022-06-01 17:04 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:04 +08:00:   errno: -4058,
+2022-06-01 17:04 +08:00:   code: 'ENOENT',
+2022-06-01 17:04 +08:00:   syscall: 'stat',
+2022-06-01 17:04 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:04 +08:00: } {
+2022-06-01 17:04 +08:00:   request: {
+2022-06-01 17:04 +08:00:     method: 'GET',
+2022-06-01 17:04 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:04 +08:00:     header: {
+2022-06-01 17:04 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:04 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:04 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:04 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:04 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:04 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:04 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:04 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:04 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:04 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:04 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:04 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:04 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:04 +08:00:       pragma: 'no-cache',
+2022-06-01 17:04 +08:00:       connection: 'close',
+2022-06-01 17:04 +08:00:       host: 'localhost:4000'
+2022-06-01 17:04 +08:00:     }
+2022-06-01 17:04 +08:00:   },
+2022-06-01 17:04 +08:00:   response: {
+2022-06-01 17:04 +08:00:     status: 404,
+2022-06-01 17:04 +08:00:     message: 'Not Found',
+2022-06-01 17:04 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:04 +08:00:   },
+2022-06-01 17:04 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:04 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:04 +08:00:   req: '<original node req>',
+2022-06-01 17:04 +08:00:   res: '<original node res>',
+2022-06-01 17:04 +08:00:   socket: '<original node socket>'
+2022-06-01 17:04 +08:00: }
+2022-06-01 17:06 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:06 +08:00:   errno: -4058,
+2022-06-01 17:06 +08:00:   code: 'ENOENT',
+2022-06-01 17:06 +08:00:   syscall: 'stat',
+2022-06-01 17:06 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:06 +08:00: } {
+2022-06-01 17:06 +08:00:   request: {
+2022-06-01 17:06 +08:00:     method: 'GET',
+2022-06-01 17:06 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:06 +08:00:     header: {
+2022-06-01 17:06 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:06 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:06 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:06 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:06 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:06 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:06 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:06 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:06 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:06 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:06 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:06 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:06 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:06 +08:00:       pragma: 'no-cache',
+2022-06-01 17:06 +08:00:       connection: 'close',
+2022-06-01 17:06 +08:00:       host: 'localhost:4000'
+2022-06-01 17:06 +08:00:     }
+2022-06-01 17:06 +08:00:   },
+2022-06-01 17:06 +08:00:   response: {
+2022-06-01 17:06 +08:00:     status: 404,
+2022-06-01 17:06 +08:00:     message: 'Not Found',
+2022-06-01 17:06 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:06 +08:00:   },
+2022-06-01 17:06 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:06 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:06 +08:00:   req: '<original node req>',
+2022-06-01 17:06 +08:00:   res: '<original node res>',
+2022-06-01 17:06 +08:00:   socket: '<original node socket>'
+2022-06-01 17:06 +08:00: }
+2022-06-01 17:06 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:06 +08:00:   errno: -4058,
+2022-06-01 17:06 +08:00:   code: 'ENOENT',
+2022-06-01 17:06 +08:00:   syscall: 'stat',
+2022-06-01 17:06 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:06 +08:00: } {
+2022-06-01 17:06 +08:00:   request: {
+2022-06-01 17:06 +08:00:     method: 'GET',
+2022-06-01 17:06 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:06 +08:00:     header: {
+2022-06-01 17:06 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:06 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:06 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:06 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:06 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:06 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:06 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:06 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:06 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:06 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:06 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:06 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:06 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:06 +08:00:       pragma: 'no-cache',
+2022-06-01 17:06 +08:00:       connection: 'close',
+2022-06-01 17:06 +08:00:       host: 'localhost:4000'
+2022-06-01 17:06 +08:00:     }
+2022-06-01 17:06 +08:00:   },
+2022-06-01 17:06 +08:00:   response: {
+2022-06-01 17:06 +08:00:     status: 404,
+2022-06-01 17:06 +08:00:     message: 'Not Found',
+2022-06-01 17:06 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:06 +08:00:   },
+2022-06-01 17:06 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:06 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:06 +08:00:   req: '<original node req>',
+2022-06-01 17:06 +08:00:   res: '<original node res>',
+2022-06-01 17:06 +08:00:   socket: '<original node socket>'
+2022-06-01 17:06 +08:00: }
+2022-06-01 17:09 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:09 +08:00:   errno: -4058,
+2022-06-01 17:09 +08:00:   code: 'ENOENT',
+2022-06-01 17:09 +08:00:   syscall: 'stat',
+2022-06-01 17:09 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:09 +08:00: } {
+2022-06-01 17:09 +08:00:   request: {
+2022-06-01 17:09 +08:00:     method: 'GET',
+2022-06-01 17:09 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:09 +08:00:     header: {
+2022-06-01 17:09 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:09 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:09 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:09 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:09 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:09 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:09 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:09 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:09 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:09 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:09 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:09 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:09 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:09 +08:00:       pragma: 'no-cache',
+2022-06-01 17:09 +08:00:       connection: 'close',
+2022-06-01 17:09 +08:00:       host: 'localhost:4000'
+2022-06-01 17:09 +08:00:     }
+2022-06-01 17:09 +08:00:   },
+2022-06-01 17:09 +08:00:   response: {
+2022-06-01 17:09 +08:00:     status: 404,
+2022-06-01 17:09 +08:00:     message: 'Not Found',
+2022-06-01 17:09 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:09 +08:00:   },
+2022-06-01 17:09 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:09 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:09 +08:00:   req: '<original node req>',
+2022-06-01 17:09 +08:00:   res: '<original node res>',
+2022-06-01 17:09 +08:00:   socket: '<original node socket>'
+2022-06-01 17:09 +08:00: }
+2022-06-01 17:09 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:09 +08:00:   errno: -4058,
+2022-06-01 17:09 +08:00:   code: 'ENOENT',
+2022-06-01 17:09 +08:00:   syscall: 'stat',
+2022-06-01 17:09 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:09 +08:00: } {
+2022-06-01 17:09 +08:00:   request: {
+2022-06-01 17:09 +08:00:     method: 'GET',
+2022-06-01 17:09 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:09 +08:00:     header: {
+2022-06-01 17:09 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:09 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:09 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:09 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:09 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:09 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:09 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:09 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:09 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:09 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:09 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:09 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:09 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:09 +08:00:       pragma: 'no-cache',
+2022-06-01 17:09 +08:00:       connection: 'close',
+2022-06-01 17:09 +08:00:       host: 'localhost:4000'
+2022-06-01 17:09 +08:00:     }
+2022-06-01 17:09 +08:00:   },
+2022-06-01 17:09 +08:00:   response: {
+2022-06-01 17:09 +08:00:     status: 404,
+2022-06-01 17:09 +08:00:     message: 'Not Found',
+2022-06-01 17:09 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:09 +08:00:   },
+2022-06-01 17:09 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:09 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:09 +08:00:   req: '<original node req>',
+2022-06-01 17:09 +08:00:   res: '<original node res>',
+2022-06-01 17:09 +08:00:   socket: '<original node socket>'
+2022-06-01 17:09 +08:00: }
+2022-06-01 17:10 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:10 +08:00:   errno: -4058,
+2022-06-01 17:10 +08:00:   code: 'ENOENT',
+2022-06-01 17:10 +08:00:   syscall: 'stat',
+2022-06-01 17:10 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:10 +08:00: } {
+2022-06-01 17:10 +08:00:   request: {
+2022-06-01 17:10 +08:00:     method: 'GET',
+2022-06-01 17:10 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:10 +08:00:     header: {
+2022-06-01 17:10 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:10 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:10 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:10 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:10 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:10 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:10 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:10 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:10 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:10 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:10 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:10 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:10 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:10 +08:00:       pragma: 'no-cache',
+2022-06-01 17:10 +08:00:       connection: 'close',
+2022-06-01 17:10 +08:00:       host: 'localhost:4000'
+2022-06-01 17:10 +08:00:     }
+2022-06-01 17:10 +08:00:   },
+2022-06-01 17:10 +08:00:   response: {
+2022-06-01 17:10 +08:00:     status: 404,
+2022-06-01 17:10 +08:00:     message: 'Not Found',
+2022-06-01 17:10 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:10 +08:00:   },
+2022-06-01 17:10 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:10 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:10 +08:00:   req: '<original node req>',
+2022-06-01 17:10 +08:00:   res: '<original node res>',
+2022-06-01 17:10 +08:00:   socket: '<original node socket>'
+2022-06-01 17:10 +08:00: }
+2022-06-01 17:13 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:13 +08:00:   errno: -4058,
+2022-06-01 17:13 +08:00:   code: 'ENOENT',
+2022-06-01 17:13 +08:00:   syscall: 'stat',
+2022-06-01 17:13 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:13 +08:00: } {
+2022-06-01 17:13 +08:00:   request: {
+2022-06-01 17:13 +08:00:     method: 'GET',
+2022-06-01 17:13 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:13 +08:00:     header: {
+2022-06-01 17:13 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:13 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:13 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:13 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:13 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:13 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:13 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:13 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:13 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:13 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:13 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:13 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:13 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:13 +08:00:       pragma: 'no-cache',
+2022-06-01 17:13 +08:00:       connection: 'close',
+2022-06-01 17:13 +08:00:       host: 'localhost:4000'
+2022-06-01 17:13 +08:00:     }
+2022-06-01 17:13 +08:00:   },
+2022-06-01 17:13 +08:00:   response: {
+2022-06-01 17:13 +08:00:     status: 404,
+2022-06-01 17:13 +08:00:     message: 'Not Found',
+2022-06-01 17:13 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:13 +08:00:   },
+2022-06-01 17:13 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:13 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:13 +08:00:   req: '<original node req>',
+2022-06-01 17:13 +08:00:   res: '<original node res>',
+2022-06-01 17:13 +08:00:   socket: '<original node socket>'
+2022-06-01 17:13 +08:00: }
+2022-06-01 17:15 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:15 +08:00:   errno: -4058,
+2022-06-01 17:15 +08:00:   code: 'ENOENT',
+2022-06-01 17:15 +08:00:   syscall: 'stat',
+2022-06-01 17:15 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:15 +08:00: } {
+2022-06-01 17:15 +08:00:   request: {
+2022-06-01 17:15 +08:00:     method: 'GET',
+2022-06-01 17:15 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:15 +08:00:     header: {
+2022-06-01 17:15 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:15 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:15 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:15 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:15 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:15 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:15 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:15 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:15 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:15 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:15 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:15 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:15 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:15 +08:00:       pragma: 'no-cache',
+2022-06-01 17:15 +08:00:       connection: 'close',
+2022-06-01 17:15 +08:00:       host: 'localhost:4000'
+2022-06-01 17:15 +08:00:     }
+2022-06-01 17:15 +08:00:   },
+2022-06-01 17:15 +08:00:   response: {
+2022-06-01 17:15 +08:00:     status: 404,
+2022-06-01 17:15 +08:00:     message: 'Not Found',
+2022-06-01 17:15 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:15 +08:00:   },
+2022-06-01 17:15 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:15 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:15 +08:00:   req: '<original node req>',
+2022-06-01 17:15 +08:00:   res: '<original node res>',
+2022-06-01 17:15 +08:00:   socket: '<original node socket>'
+2022-06-01 17:15 +08:00: }
+2022-06-01 17:15 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:15 +08:00:   errno: -4058,
+2022-06-01 17:15 +08:00:   code: 'ENOENT',
+2022-06-01 17:15 +08:00:   syscall: 'stat',
+2022-06-01 17:15 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:15 +08:00: } {
+2022-06-01 17:15 +08:00:   request: {
+2022-06-01 17:15 +08:00:     method: 'GET',
+2022-06-01 17:15 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:15 +08:00:     header: {
+2022-06-01 17:15 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:15 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:15 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:15 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:15 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:15 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:15 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:15 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:15 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:15 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:15 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:15 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:15 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:15 +08:00:       pragma: 'no-cache',
+2022-06-01 17:15 +08:00:       connection: 'close',
+2022-06-01 17:15 +08:00:       host: 'localhost:4000'
+2022-06-01 17:15 +08:00:     }
+2022-06-01 17:15 +08:00:   },
+2022-06-01 17:15 +08:00:   response: {
+2022-06-01 17:15 +08:00:     status: 404,
+2022-06-01 17:15 +08:00:     message: 'Not Found',
+2022-06-01 17:15 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:15 +08:00:   },
+2022-06-01 17:15 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:15 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:15 +08:00:   req: '<original node req>',
+2022-06-01 17:15 +08:00:   res: '<original node res>',
+2022-06-01 17:15 +08:00:   socket: '<original node socket>'
+2022-06-01 17:15 +08:00: }
+2022-06-01 17:16 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:16 +08:00:   errno: -4058,
+2022-06-01 17:16 +08:00:   code: 'ENOENT',
+2022-06-01 17:16 +08:00:   syscall: 'stat',
+2022-06-01 17:16 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:16 +08:00: } {
+2022-06-01 17:16 +08:00:   request: {
+2022-06-01 17:16 +08:00:     method: 'GET',
+2022-06-01 17:16 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:16 +08:00:     header: {
+2022-06-01 17:16 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:16 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:16 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:16 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:16 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:16 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:16 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:16 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:16 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:16 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:16 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:16 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:16 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:16 +08:00:       pragma: 'no-cache',
+2022-06-01 17:16 +08:00:       connection: 'close',
+2022-06-01 17:16 +08:00:       host: 'localhost:4000'
+2022-06-01 17:16 +08:00:     }
+2022-06-01 17:16 +08:00:   },
+2022-06-01 17:16 +08:00:   response: {
+2022-06-01 17:16 +08:00:     status: 404,
+2022-06-01 17:16 +08:00:     message: 'Not Found',
+2022-06-01 17:16 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:16 +08:00:   },
+2022-06-01 17:16 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:16 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:16 +08:00:   req: '<original node req>',
+2022-06-01 17:16 +08:00:   res: '<original node res>',
+2022-06-01 17:16 +08:00:   socket: '<original node socket>'
+2022-06-01 17:16 +08:00: }
+2022-06-01 17:18 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:18 +08:00:   errno: -4058,
+2022-06-01 17:18 +08:00:   code: 'ENOENT',
+2022-06-01 17:18 +08:00:   syscall: 'stat',
+2022-06-01 17:18 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:18 +08:00: } {
+2022-06-01 17:18 +08:00:   request: {
+2022-06-01 17:18 +08:00:     method: 'GET',
+2022-06-01 17:18 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:18 +08:00:     header: {
+2022-06-01 17:18 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:18 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:18 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:18 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:18 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:18 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:18 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:18 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:18 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:18 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:18 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:18 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:18 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:18 +08:00:       pragma: 'no-cache',
+2022-06-01 17:18 +08:00:       connection: 'close',
+2022-06-01 17:18 +08:00:       host: 'localhost:4000'
+2022-06-01 17:18 +08:00:     }
+2022-06-01 17:18 +08:00:   },
+2022-06-01 17:18 +08:00:   response: {
+2022-06-01 17:18 +08:00:     status: 404,
+2022-06-01 17:18 +08:00:     message: 'Not Found',
+2022-06-01 17:18 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:18 +08:00:   },
+2022-06-01 17:18 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:18 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:18 +08:00:   req: '<original node req>',
+2022-06-01 17:18 +08:00:   res: '<original node res>',
+2022-06-01 17:18 +08:00:   socket: '<original node socket>'
+2022-06-01 17:18 +08:00: }
+2022-06-01 17:20 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:20 +08:00:   errno: -4058,
+2022-06-01 17:20 +08:00:   code: 'ENOENT',
+2022-06-01 17:20 +08:00:   syscall: 'stat',
+2022-06-01 17:20 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:20 +08:00: } {
+2022-06-01 17:20 +08:00:   request: {
+2022-06-01 17:20 +08:00:     method: 'GET',
+2022-06-01 17:20 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:20 +08:00:     header: {
+2022-06-01 17:20 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:20 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:20 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:20 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:20 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:20 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:20 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:20 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:20 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:20 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:20 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:20 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:20 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:20 +08:00:       pragma: 'no-cache',
+2022-06-01 17:20 +08:00:       connection: 'close',
+2022-06-01 17:20 +08:00:       host: 'localhost:4000'
+2022-06-01 17:20 +08:00:     }
+2022-06-01 17:20 +08:00:   },
+2022-06-01 17:20 +08:00:   response: {
+2022-06-01 17:20 +08:00:     status: 404,
+2022-06-01 17:20 +08:00:     message: 'Not Found',
+2022-06-01 17:20 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:20 +08:00:   },
+2022-06-01 17:20 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:20 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:20 +08:00:   req: '<original node req>',
+2022-06-01 17:20 +08:00:   res: '<original node res>',
+2022-06-01 17:20 +08:00:   socket: '<original node socket>'
+2022-06-01 17:20 +08:00: }
+2022-06-01 17:20 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:20 +08:00:   errno: -4058,
+2022-06-01 17:20 +08:00:   code: 'ENOENT',
+2022-06-01 17:20 +08:00:   syscall: 'stat',
+2022-06-01 17:20 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:20 +08:00: } {
+2022-06-01 17:20 +08:00:   request: {
+2022-06-01 17:20 +08:00:     method: 'GET',
+2022-06-01 17:20 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:20 +08:00:     header: {
+2022-06-01 17:20 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:20 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:20 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:20 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:20 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:20 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:20 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:20 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:20 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:20 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:20 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:20 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:20 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:20 +08:00:       pragma: 'no-cache',
+2022-06-01 17:20 +08:00:       connection: 'close',
+2022-06-01 17:20 +08:00:       host: 'localhost:4000'
+2022-06-01 17:20 +08:00:     }
+2022-06-01 17:20 +08:00:   },
+2022-06-01 17:20 +08:00:   response: {
+2022-06-01 17:20 +08:00:     status: 404,
+2022-06-01 17:20 +08:00:     message: 'Not Found',
+2022-06-01 17:20 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:20 +08:00:   },
+2022-06-01 17:20 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:20 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:20 +08:00:   req: '<original node req>',
+2022-06-01 17:20 +08:00:   res: '<original node res>',
+2022-06-01 17:20 +08:00:   socket: '<original node socket>'
+2022-06-01 17:20 +08:00: }
+2022-06-01 17:20 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:20 +08:00:   errno: -4058,
+2022-06-01 17:20 +08:00:   code: 'ENOENT',
+2022-06-01 17:20 +08:00:   syscall: 'stat',
+2022-06-01 17:20 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:20 +08:00: } {
+2022-06-01 17:20 +08:00:   request: {
+2022-06-01 17:20 +08:00:     method: 'GET',
+2022-06-01 17:20 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:20 +08:00:     header: {
+2022-06-01 17:20 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:20 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:20 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:20 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:20 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:20 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:20 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:20 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:20 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:20 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:20 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:20 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:20 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:20 +08:00:       pragma: 'no-cache',
+2022-06-01 17:20 +08:00:       connection: 'close',
+2022-06-01 17:20 +08:00:       host: 'localhost:4000'
+2022-06-01 17:20 +08:00:     }
+2022-06-01 17:20 +08:00:   },
+2022-06-01 17:20 +08:00:   response: {
+2022-06-01 17:20 +08:00:     status: 404,
+2022-06-01 17:20 +08:00:     message: 'Not Found',
+2022-06-01 17:20 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:20 +08:00:   },
+2022-06-01 17:20 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:20 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:20 +08:00:   req: '<original node req>',
+2022-06-01 17:20 +08:00:   res: '<original node res>',
+2022-06-01 17:20 +08:00:   socket: '<original node socket>'
+2022-06-01 17:20 +08:00: }
+2022-06-01 17:21 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:21 +08:00:   errno: -4058,
+2022-06-01 17:21 +08:00:   code: 'ENOENT',
+2022-06-01 17:21 +08:00:   syscall: 'stat',
+2022-06-01 17:21 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:21 +08:00: } {
+2022-06-01 17:21 +08:00:   request: {
+2022-06-01 17:21 +08:00:     method: 'GET',
+2022-06-01 17:21 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:21 +08:00:     header: {
+2022-06-01 17:21 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:21 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:21 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:21 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:21 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:21 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:21 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:21 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:21 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:21 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:21 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:21 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:21 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:21 +08:00:       pragma: 'no-cache',
+2022-06-01 17:21 +08:00:       connection: 'close',
+2022-06-01 17:21 +08:00:       host: 'localhost:4000'
+2022-06-01 17:21 +08:00:     }
+2022-06-01 17:21 +08:00:   },
+2022-06-01 17:21 +08:00:   response: {
+2022-06-01 17:21 +08:00:     status: 404,
+2022-06-01 17:21 +08:00:     message: 'Not Found',
+2022-06-01 17:21 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:21 +08:00:   },
+2022-06-01 17:21 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:21 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:21 +08:00:   req: '<original node req>',
+2022-06-01 17:21 +08:00:   res: '<original node res>',
+2022-06-01 17:21 +08:00:   socket: '<original node socket>'
+2022-06-01 17:21 +08:00: }
+2022-06-01 17:22 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:22 +08:00:   errno: -4058,
+2022-06-01 17:22 +08:00:   code: 'ENOENT',
+2022-06-01 17:22 +08:00:   syscall: 'stat',
+2022-06-01 17:22 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:22 +08:00: } {
+2022-06-01 17:22 +08:00:   request: {
+2022-06-01 17:22 +08:00:     method: 'GET',
+2022-06-01 17:22 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:22 +08:00:     header: {
+2022-06-01 17:22 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:22 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:22 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:22 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:22 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:22 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:22 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:22 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:22 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:22 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:22 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:22 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:22 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:22 +08:00:       pragma: 'no-cache',
+2022-06-01 17:22 +08:00:       connection: 'close',
+2022-06-01 17:22 +08:00:       host: 'localhost:4000'
+2022-06-01 17:22 +08:00:     }
+2022-06-01 17:22 +08:00:   },
+2022-06-01 17:22 +08:00:   response: {
+2022-06-01 17:22 +08:00:     status: 404,
+2022-06-01 17:22 +08:00:     message: 'Not Found',
+2022-06-01 17:22 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:22 +08:00:   },
+2022-06-01 17:22 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:22 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:22 +08:00:   req: '<original node req>',
+2022-06-01 17:22 +08:00:   res: '<original node res>',
+2022-06-01 17:22 +08:00:   socket: '<original node socket>'
+2022-06-01 17:22 +08:00: }
+2022-06-01 17:22 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:22 +08:00:   errno: -4058,
+2022-06-01 17:22 +08:00:   code: 'ENOENT',
+2022-06-01 17:22 +08:00:   syscall: 'stat',
+2022-06-01 17:22 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:22 +08:00: } {
+2022-06-01 17:22 +08:00:   request: {
+2022-06-01 17:22 +08:00:     method: 'GET',
+2022-06-01 17:22 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:22 +08:00:     header: {
+2022-06-01 17:22 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:22 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:22 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:22 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:22 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:22 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:22 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:22 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:22 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:22 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:22 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:22 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:22 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:22 +08:00:       pragma: 'no-cache',
+2022-06-01 17:22 +08:00:       connection: 'close',
+2022-06-01 17:22 +08:00:       host: 'localhost:4000'
+2022-06-01 17:22 +08:00:     }
+2022-06-01 17:22 +08:00:   },
+2022-06-01 17:22 +08:00:   response: {
+2022-06-01 17:22 +08:00:     status: 404,
+2022-06-01 17:22 +08:00:     message: 'Not Found',
+2022-06-01 17:22 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:22 +08:00:   },
+2022-06-01 17:22 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:22 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:22 +08:00:   req: '<original node req>',
+2022-06-01 17:22 +08:00:   res: '<original node res>',
+2022-06-01 17:22 +08:00:   socket: '<original node socket>'
+2022-06-01 17:22 +08:00: }
+2022-06-01 17:22 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:22 +08:00:   errno: -4058,
+2022-06-01 17:22 +08:00:   code: 'ENOENT',
+2022-06-01 17:22 +08:00:   syscall: 'stat',
+2022-06-01 17:22 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:22 +08:00: } {
+2022-06-01 17:22 +08:00:   request: {
+2022-06-01 17:22 +08:00:     method: 'GET',
+2022-06-01 17:22 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:22 +08:00:     header: {
+2022-06-01 17:22 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:22 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:22 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:22 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:22 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:22 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:22 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:22 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:22 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:22 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:22 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:22 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:22 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:22 +08:00:       pragma: 'no-cache',
+2022-06-01 17:22 +08:00:       connection: 'close',
+2022-06-01 17:22 +08:00:       host: 'localhost:4000'
+2022-06-01 17:22 +08:00:     }
+2022-06-01 17:22 +08:00:   },
+2022-06-01 17:22 +08:00:   response: {
+2022-06-01 17:22 +08:00:     status: 404,
+2022-06-01 17:22 +08:00:     message: 'Not Found',
+2022-06-01 17:22 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:22 +08:00:   },
+2022-06-01 17:22 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:22 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:22 +08:00:   req: '<original node req>',
+2022-06-01 17:22 +08:00:   res: '<original node res>',
+2022-06-01 17:22 +08:00:   socket: '<original node socket>'
+2022-06-01 17:22 +08:00: }
+2022-06-01 17:24 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:24 +08:00:   errno: -4058,
+2022-06-01 17:24 +08:00:   code: 'ENOENT',
+2022-06-01 17:24 +08:00:   syscall: 'stat',
+2022-06-01 17:24 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:24 +08:00: } {
+2022-06-01 17:24 +08:00:   request: {
+2022-06-01 17:24 +08:00:     method: 'GET',
+2022-06-01 17:24 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:24 +08:00:     header: {
+2022-06-01 17:24 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:24 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:24 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:24 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:24 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:24 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:24 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:24 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:24 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:24 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:24 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:24 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:24 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:24 +08:00:       pragma: 'no-cache',
+2022-06-01 17:24 +08:00:       connection: 'close',
+2022-06-01 17:24 +08:00:       host: 'localhost:4000'
+2022-06-01 17:24 +08:00:     }
+2022-06-01 17:24 +08:00:   },
+2022-06-01 17:24 +08:00:   response: {
+2022-06-01 17:24 +08:00:     status: 404,
+2022-06-01 17:24 +08:00:     message: 'Not Found',
+2022-06-01 17:24 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:24 +08:00:   },
+2022-06-01 17:24 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:24 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:24 +08:00:   req: '<original node req>',
+2022-06-01 17:24 +08:00:   res: '<original node res>',
+2022-06-01 17:24 +08:00:   socket: '<original node socket>'
+2022-06-01 17:24 +08:00: }
+2022-06-01 17:26 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:26 +08:00:   errno: -4058,
+2022-06-01 17:26 +08:00:   code: 'ENOENT',
+2022-06-01 17:26 +08:00:   syscall: 'stat',
+2022-06-01 17:26 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:26 +08:00: } {
+2022-06-01 17:26 +08:00:   request: {
+2022-06-01 17:26 +08:00:     method: 'GET',
+2022-06-01 17:26 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:26 +08:00:     header: {
+2022-06-01 17:26 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:26 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:26 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:26 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:26 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:26 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:26 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:26 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:26 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:26 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:26 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:26 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:26 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:26 +08:00:       pragma: 'no-cache',
+2022-06-01 17:26 +08:00:       connection: 'close',
+2022-06-01 17:26 +08:00:       host: 'localhost:4000'
+2022-06-01 17:26 +08:00:     }
+2022-06-01 17:26 +08:00:   },
+2022-06-01 17:26 +08:00:   response: {
+2022-06-01 17:26 +08:00:     status: 404,
+2022-06-01 17:26 +08:00:     message: 'Not Found',
+2022-06-01 17:26 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:26 +08:00:   },
+2022-06-01 17:26 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:26 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:26 +08:00:   req: '<original node req>',
+2022-06-01 17:26 +08:00:   res: '<original node res>',
+2022-06-01 17:26 +08:00:   socket: '<original node socket>'
+2022-06-01 17:26 +08:00: }
+2022-06-01 17:27 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:27 +08:00:   errno: -4058,
+2022-06-01 17:27 +08:00:   code: 'ENOENT',
+2022-06-01 17:27 +08:00:   syscall: 'stat',
+2022-06-01 17:27 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:27 +08:00: } {
+2022-06-01 17:27 +08:00:   request: {
+2022-06-01 17:27 +08:00:     method: 'GET',
+2022-06-01 17:27 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:27 +08:00:     header: {
+2022-06-01 17:27 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:27 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:27 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:27 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:27 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:27 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:27 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:27 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:27 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:27 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:27 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:27 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:27 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:27 +08:00:       pragma: 'no-cache',
+2022-06-01 17:27 +08:00:       connection: 'close',
+2022-06-01 17:27 +08:00:       host: 'localhost:4000'
+2022-06-01 17:27 +08:00:     }
+2022-06-01 17:27 +08:00:   },
+2022-06-01 17:27 +08:00:   response: {
+2022-06-01 17:27 +08:00:     status: 404,
+2022-06-01 17:27 +08:00:     message: 'Not Found',
+2022-06-01 17:27 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:27 +08:00:   },
+2022-06-01 17:27 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:27 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:27 +08:00:   req: '<original node req>',
+2022-06-01 17:27 +08:00:   res: '<original node res>',
+2022-06-01 17:27 +08:00:   socket: '<original node socket>'
+2022-06-01 17:27 +08:00: }
+2022-06-01 17:33 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:33 +08:00:   errno: -4058,
+2022-06-01 17:33 +08:00:   code: 'ENOENT',
+2022-06-01 17:33 +08:00:   syscall: 'stat',
+2022-06-01 17:33 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:33 +08:00: } {
+2022-06-01 17:33 +08:00:   request: {
+2022-06-01 17:33 +08:00:     method: 'GET',
+2022-06-01 17:33 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:33 +08:00:     header: {
+2022-06-01 17:33 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:33 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:33 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:33 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:33 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:33 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:33 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:33 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:33 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:33 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:33 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:33 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:33 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:33 +08:00:       pragma: 'no-cache',
+2022-06-01 17:33 +08:00:       connection: 'close',
+2022-06-01 17:33 +08:00:       host: 'localhost:4000'
+2022-06-01 17:33 +08:00:     }
+2022-06-01 17:33 +08:00:   },
+2022-06-01 17:33 +08:00:   response: {
+2022-06-01 17:33 +08:00:     status: 404,
+2022-06-01 17:33 +08:00:     message: 'Not Found',
+2022-06-01 17:33 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:33 +08:00:   },
+2022-06-01 17:33 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:33 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:33 +08:00:   req: '<original node req>',
+2022-06-01 17:33 +08:00:   res: '<original node res>',
+2022-06-01 17:33 +08:00:   socket: '<original node socket>'
+2022-06-01 17:33 +08:00: }
+2022-06-01 17:34 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:34 +08:00:   errno: -4058,
+2022-06-01 17:34 +08:00:   code: 'ENOENT',
+2022-06-01 17:34 +08:00:   syscall: 'stat',
+2022-06-01 17:34 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:34 +08:00: } {
+2022-06-01 17:34 +08:00:   request: {
+2022-06-01 17:34 +08:00:     method: 'GET',
+2022-06-01 17:34 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:34 +08:00:     header: {
+2022-06-01 17:34 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:34 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:34 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:34 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:34 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:34 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:34 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:34 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:34 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:34 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:34 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:34 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:34 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:34 +08:00:       pragma: 'no-cache',
+2022-06-01 17:34 +08:00:       connection: 'close',
+2022-06-01 17:34 +08:00:       host: 'localhost:4000'
+2022-06-01 17:34 +08:00:     }
+2022-06-01 17:34 +08:00:   },
+2022-06-01 17:34 +08:00:   response: {
+2022-06-01 17:34 +08:00:     status: 404,
+2022-06-01 17:34 +08:00:     message: 'Not Found',
+2022-06-01 17:34 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:34 +08:00:   },
+2022-06-01 17:34 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:34 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:34 +08:00:   req: '<original node req>',
+2022-06-01 17:34 +08:00:   res: '<original node res>',
+2022-06-01 17:34 +08:00:   socket: '<original node socket>'
+2022-06-01 17:34 +08:00: }
+2022-06-01 17:35 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:35 +08:00:   errno: -4058,
+2022-06-01 17:35 +08:00:   code: 'ENOENT',
+2022-06-01 17:35 +08:00:   syscall: 'stat',
+2022-06-01 17:35 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:35 +08:00: } {
+2022-06-01 17:35 +08:00:   request: {
+2022-06-01 17:35 +08:00:     method: 'GET',
+2022-06-01 17:35 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:35 +08:00:     header: {
+2022-06-01 17:35 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:35 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:35 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:35 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:35 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:35 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:35 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:35 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:35 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:35 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:35 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:35 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:35 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:35 +08:00:       pragma: 'no-cache',
+2022-06-01 17:35 +08:00:       connection: 'close',
+2022-06-01 17:35 +08:00:       host: 'localhost:4000'
+2022-06-01 17:35 +08:00:     }
+2022-06-01 17:35 +08:00:   },
+2022-06-01 17:35 +08:00:   response: {
+2022-06-01 17:35 +08:00:     status: 404,
+2022-06-01 17:35 +08:00:     message: 'Not Found',
+2022-06-01 17:35 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:35 +08:00:   },
+2022-06-01 17:35 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:35 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:35 +08:00:   req: '<original node req>',
+2022-06-01 17:35 +08:00:   res: '<original node res>',
+2022-06-01 17:35 +08:00:   socket: '<original node socket>'
+2022-06-01 17:35 +08:00: }
+2022-06-01 17:35 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:35 +08:00:   errno: -4058,
+2022-06-01 17:35 +08:00:   code: 'ENOENT',
+2022-06-01 17:35 +08:00:   syscall: 'stat',
+2022-06-01 17:35 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:35 +08:00: } {
+2022-06-01 17:35 +08:00:   request: {
+2022-06-01 17:35 +08:00:     method: 'GET',
+2022-06-01 17:35 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:35 +08:00:     header: {
+2022-06-01 17:35 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:35 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:35 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:35 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:35 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:35 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:35 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:35 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:35 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:35 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:35 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:35 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:35 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:35 +08:00:       pragma: 'no-cache',
+2022-06-01 17:35 +08:00:       connection: 'close',
+2022-06-01 17:35 +08:00:       host: 'localhost:4000'
+2022-06-01 17:35 +08:00:     }
+2022-06-01 17:35 +08:00:   },
+2022-06-01 17:35 +08:00:   response: {
+2022-06-01 17:35 +08:00:     status: 404,
+2022-06-01 17:35 +08:00:     message: 'Not Found',
+2022-06-01 17:35 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:35 +08:00:   },
+2022-06-01 17:35 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:35 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:35 +08:00:   req: '<original node req>',
+2022-06-01 17:35 +08:00:   res: '<original node res>',
+2022-06-01 17:35 +08:00:   socket: '<original node socket>'
+2022-06-01 17:35 +08:00: }
+2022-06-01 17:36 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:36 +08:00:   errno: -4058,
+2022-06-01 17:36 +08:00:   code: 'ENOENT',
+2022-06-01 17:36 +08:00:   syscall: 'stat',
+2022-06-01 17:36 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:36 +08:00: } {
+2022-06-01 17:36 +08:00:   request: {
+2022-06-01 17:36 +08:00:     method: 'GET',
+2022-06-01 17:36 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:36 +08:00:     header: {
+2022-06-01 17:36 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:36 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:36 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:36 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:36 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:36 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:36 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:36 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:36 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:36 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:36 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:36 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:36 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:36 +08:00:       pragma: 'no-cache',
+2022-06-01 17:36 +08:00:       connection: 'close',
+2022-06-01 17:36 +08:00:       host: 'localhost:4000'
+2022-06-01 17:36 +08:00:     }
+2022-06-01 17:36 +08:00:   },
+2022-06-01 17:36 +08:00:   response: {
+2022-06-01 17:36 +08:00:     status: 404,
+2022-06-01 17:36 +08:00:     message: 'Not Found',
+2022-06-01 17:36 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:36 +08:00:   },
+2022-06-01 17:36 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:36 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:36 +08:00:   req: '<original node req>',
+2022-06-01 17:36 +08:00:   res: '<original node res>',
+2022-06-01 17:36 +08:00:   socket: '<original node socket>'
+2022-06-01 17:36 +08:00: }
+2022-06-01 17:37 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:37 +08:00:   errno: -4058,
+2022-06-01 17:37 +08:00:   code: 'ENOENT',
+2022-06-01 17:37 +08:00:   syscall: 'stat',
+2022-06-01 17:37 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:37 +08:00: } {
+2022-06-01 17:37 +08:00:   request: {
+2022-06-01 17:37 +08:00:     method: 'GET',
+2022-06-01 17:37 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:37 +08:00:     header: {
+2022-06-01 17:37 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:37 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:37 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:37 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:37 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:37 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:37 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:37 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:37 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:37 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:37 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:37 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:37 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:37 +08:00:       pragma: 'no-cache',
+2022-06-01 17:37 +08:00:       connection: 'close',
+2022-06-01 17:37 +08:00:       host: 'localhost:4000'
+2022-06-01 17:37 +08:00:     }
+2022-06-01 17:37 +08:00:   },
+2022-06-01 17:37 +08:00:   response: {
+2022-06-01 17:37 +08:00:     status: 404,
+2022-06-01 17:37 +08:00:     message: 'Not Found',
+2022-06-01 17:37 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:37 +08:00:   },
+2022-06-01 17:37 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:37 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:37 +08:00:   req: '<original node req>',
+2022-06-01 17:37 +08:00:   res: '<original node res>',
+2022-06-01 17:37 +08:00:   socket: '<original node socket>'
+2022-06-01 17:37 +08:00: }
+2022-06-01 17:37 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:37 +08:00:   errno: -4058,
+2022-06-01 17:37 +08:00:   code: 'ENOENT',
+2022-06-01 17:37 +08:00:   syscall: 'stat',
+2022-06-01 17:37 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:37 +08:00: } {
+2022-06-01 17:37 +08:00:   request: {
+2022-06-01 17:37 +08:00:     method: 'GET',
+2022-06-01 17:37 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:37 +08:00:     header: {
+2022-06-01 17:37 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:37 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:37 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:37 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:37 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:37 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:37 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:37 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:37 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:37 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:37 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:37 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:37 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:37 +08:00:       pragma: 'no-cache',
+2022-06-01 17:37 +08:00:       connection: 'close',
+2022-06-01 17:37 +08:00:       host: 'localhost:4000'
+2022-06-01 17:37 +08:00:     }
+2022-06-01 17:37 +08:00:   },
+2022-06-01 17:37 +08:00:   response: {
+2022-06-01 17:37 +08:00:     status: 404,
+2022-06-01 17:37 +08:00:     message: 'Not Found',
+2022-06-01 17:37 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:37 +08:00:   },
+2022-06-01 17:37 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:37 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:37 +08:00:   req: '<original node req>',
+2022-06-01 17:37 +08:00:   res: '<original node res>',
+2022-06-01 17:37 +08:00:   socket: '<original node socket>'
+2022-06-01 17:37 +08:00: }
+2022-06-01 17:37 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:37 +08:00:   errno: -4058,
+2022-06-01 17:37 +08:00:   code: 'ENOENT',
+2022-06-01 17:37 +08:00:   syscall: 'stat',
+2022-06-01 17:37 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:37 +08:00: } {
+2022-06-01 17:37 +08:00:   request: {
+2022-06-01 17:37 +08:00:     method: 'GET',
+2022-06-01 17:37 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:37 +08:00:     header: {
+2022-06-01 17:37 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:37 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:37 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:37 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:37 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:37 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:37 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:37 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:37 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:37 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:37 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:37 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:37 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:37 +08:00:       pragma: 'no-cache',
+2022-06-01 17:37 +08:00:       connection: 'close',
+2022-06-01 17:37 +08:00:       host: 'localhost:4000'
+2022-06-01 17:37 +08:00:     }
+2022-06-01 17:37 +08:00:   },
+2022-06-01 17:37 +08:00:   response: {
+2022-06-01 17:37 +08:00:     status: 404,
+2022-06-01 17:37 +08:00:     message: 'Not Found',
+2022-06-01 17:37 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:37 +08:00:   },
+2022-06-01 17:37 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:37 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:37 +08:00:   req: '<original node req>',
+2022-06-01 17:37 +08:00:   res: '<original node res>',
+2022-06-01 17:37 +08:00:   socket: '<original node socket>'
+2022-06-01 17:37 +08:00: }
+2022-06-01 17:38 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:38 +08:00:   errno: -4058,
+2022-06-01 17:38 +08:00:   code: 'ENOENT',
+2022-06-01 17:38 +08:00:   syscall: 'stat',
+2022-06-01 17:38 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:38 +08:00: } {
+2022-06-01 17:38 +08:00:   request: {
+2022-06-01 17:38 +08:00:     method: 'GET',
+2022-06-01 17:38 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:38 +08:00:     header: {
+2022-06-01 17:38 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:38 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:38 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:38 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:38 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:38 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:38 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:38 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:38 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:38 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:38 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:38 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:38 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:38 +08:00:       pragma: 'no-cache',
+2022-06-01 17:38 +08:00:       connection: 'close',
+2022-06-01 17:38 +08:00:       host: 'localhost:4000'
+2022-06-01 17:38 +08:00:     }
+2022-06-01 17:38 +08:00:   },
+2022-06-01 17:38 +08:00:   response: {
+2022-06-01 17:38 +08:00:     status: 404,
+2022-06-01 17:38 +08:00:     message: 'Not Found',
+2022-06-01 17:38 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:38 +08:00:   },
+2022-06-01 17:38 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:38 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:38 +08:00:   req: '<original node req>',
+2022-06-01 17:38 +08:00:   res: '<original node res>',
+2022-06-01 17:38 +08:00:   socket: '<original node socket>'
+2022-06-01 17:38 +08:00: }
+2022-06-01 17:38 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:38 +08:00:   errno: -4058,
+2022-06-01 17:38 +08:00:   code: 'ENOENT',
+2022-06-01 17:38 +08:00:   syscall: 'stat',
+2022-06-01 17:38 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:38 +08:00: } {
+2022-06-01 17:38 +08:00:   request: {
+2022-06-01 17:38 +08:00:     method: 'GET',
+2022-06-01 17:38 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:38 +08:00:     header: {
+2022-06-01 17:38 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:38 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:38 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:38 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:38 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:38 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:38 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:38 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:38 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:38 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:38 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:38 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:38 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:38 +08:00:       pragma: 'no-cache',
+2022-06-01 17:38 +08:00:       connection: 'close',
+2022-06-01 17:38 +08:00:       host: 'localhost:4000'
+2022-06-01 17:38 +08:00:     }
+2022-06-01 17:38 +08:00:   },
+2022-06-01 17:38 +08:00:   response: {
+2022-06-01 17:38 +08:00:     status: 404,
+2022-06-01 17:38 +08:00:     message: 'Not Found',
+2022-06-01 17:38 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:38 +08:00:   },
+2022-06-01 17:38 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:38 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:38 +08:00:   req: '<original node req>',
+2022-06-01 17:38 +08:00:   res: '<original node res>',
+2022-06-01 17:38 +08:00:   socket: '<original node socket>'
+2022-06-01 17:38 +08:00: }
+2022-06-01 17:38 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:38 +08:00:   errno: -4058,
+2022-06-01 17:38 +08:00:   code: 'ENOENT',
+2022-06-01 17:38 +08:00:   syscall: 'stat',
+2022-06-01 17:38 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:38 +08:00: } {
+2022-06-01 17:38 +08:00:   request: {
+2022-06-01 17:38 +08:00:     method: 'GET',
+2022-06-01 17:38 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:38 +08:00:     header: {
+2022-06-01 17:38 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:38 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:38 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:38 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:38 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:38 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:38 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:38 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:38 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:38 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:38 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:38 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:38 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:38 +08:00:       pragma: 'no-cache',
+2022-06-01 17:38 +08:00:       connection: 'close',
+2022-06-01 17:38 +08:00:       host: 'localhost:4000'
+2022-06-01 17:38 +08:00:     }
+2022-06-01 17:38 +08:00:   },
+2022-06-01 17:38 +08:00:   response: {
+2022-06-01 17:38 +08:00:     status: 404,
+2022-06-01 17:38 +08:00:     message: 'Not Found',
+2022-06-01 17:38 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:38 +08:00:   },
+2022-06-01 17:38 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:38 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:38 +08:00:   req: '<original node req>',
+2022-06-01 17:38 +08:00:   res: '<original node res>',
+2022-06-01 17:38 +08:00:   socket: '<original node socket>'
+2022-06-01 17:38 +08:00: }
+2022-06-01 17:38 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:38 +08:00:   errno: -4058,
+2022-06-01 17:38 +08:00:   code: 'ENOENT',
+2022-06-01 17:38 +08:00:   syscall: 'stat',
+2022-06-01 17:38 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:38 +08:00: } {
+2022-06-01 17:38 +08:00:   request: {
+2022-06-01 17:38 +08:00:     method: 'GET',
+2022-06-01 17:38 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:38 +08:00:     header: {
+2022-06-01 17:38 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:38 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:38 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:38 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:38 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:38 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:38 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:38 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:38 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:38 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:38 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:38 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:38 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:38 +08:00:       pragma: 'no-cache',
+2022-06-01 17:38 +08:00:       connection: 'close',
+2022-06-01 17:38 +08:00:       host: 'localhost:4000'
+2022-06-01 17:38 +08:00:     }
+2022-06-01 17:38 +08:00:   },
+2022-06-01 17:38 +08:00:   response: {
+2022-06-01 17:38 +08:00:     status: 404,
+2022-06-01 17:38 +08:00:     message: 'Not Found',
+2022-06-01 17:38 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:38 +08:00:   },
+2022-06-01 17:38 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:38 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:38 +08:00:   req: '<original node req>',
+2022-06-01 17:38 +08:00:   res: '<original node res>',
+2022-06-01 17:38 +08:00:   socket: '<original node socket>'
+2022-06-01 17:38 +08:00: }
+2022-06-01 17:41 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:41 +08:00:   errno: -4058,
+2022-06-01 17:41 +08:00:   code: 'ENOENT',
+2022-06-01 17:41 +08:00:   syscall: 'stat',
+2022-06-01 17:41 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:41 +08:00: } {
+2022-06-01 17:41 +08:00:   request: {
+2022-06-01 17:41 +08:00:     method: 'GET',
+2022-06-01 17:41 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:41 +08:00:     header: {
+2022-06-01 17:41 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:41 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:41 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:41 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:41 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:41 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:41 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:41 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:41 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:41 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:41 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:41 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:41 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:41 +08:00:       pragma: 'no-cache',
+2022-06-01 17:41 +08:00:       connection: 'close',
+2022-06-01 17:41 +08:00:       host: 'localhost:4000'
+2022-06-01 17:41 +08:00:     }
+2022-06-01 17:41 +08:00:   },
+2022-06-01 17:41 +08:00:   response: {
+2022-06-01 17:41 +08:00:     status: 404,
+2022-06-01 17:41 +08:00:     message: 'Not Found',
+2022-06-01 17:41 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:41 +08:00:   },
+2022-06-01 17:41 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:41 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:41 +08:00:   req: '<original node req>',
+2022-06-01 17:41 +08:00:   res: '<original node res>',
+2022-06-01 17:41 +08:00:   socket: '<original node socket>'
+2022-06-01 17:41 +08:00: }
+2022-06-01 17:41 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:41 +08:00:   errno: -4058,
+2022-06-01 17:41 +08:00:   code: 'ENOENT',
+2022-06-01 17:41 +08:00:   syscall: 'stat',
+2022-06-01 17:41 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:41 +08:00: } {
+2022-06-01 17:41 +08:00:   request: {
+2022-06-01 17:41 +08:00:     method: 'GET',
+2022-06-01 17:41 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:41 +08:00:     header: {
+2022-06-01 17:41 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:41 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:41 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:41 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:41 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:41 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:41 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:41 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:41 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:41 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:41 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:41 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:41 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:41 +08:00:       pragma: 'no-cache',
+2022-06-01 17:41 +08:00:       connection: 'close',
+2022-06-01 17:41 +08:00:       host: 'localhost:4000'
+2022-06-01 17:41 +08:00:     }
+2022-06-01 17:41 +08:00:   },
+2022-06-01 17:41 +08:00:   response: {
+2022-06-01 17:41 +08:00:     status: 404,
+2022-06-01 17:41 +08:00:     message: 'Not Found',
+2022-06-01 17:41 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:41 +08:00:   },
+2022-06-01 17:41 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:41 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:41 +08:00:   req: '<original node req>',
+2022-06-01 17:41 +08:00:   res: '<original node res>',
+2022-06-01 17:41 +08:00:   socket: '<original node socket>'
+2022-06-01 17:41 +08:00: }
+2022-06-01 17:42 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:42 +08:00:   errno: -4058,
+2022-06-01 17:42 +08:00:   code: 'ENOENT',
+2022-06-01 17:42 +08:00:   syscall: 'stat',
+2022-06-01 17:42 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:42 +08:00: } {
+2022-06-01 17:42 +08:00:   request: {
+2022-06-01 17:42 +08:00:     method: 'GET',
+2022-06-01 17:42 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:42 +08:00:     header: {
+2022-06-01 17:42 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:42 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:42 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:42 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:42 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:42 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:42 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:42 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:42 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:42 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:42 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:42 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:42 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:42 +08:00:       pragma: 'no-cache',
+2022-06-01 17:42 +08:00:       connection: 'close',
+2022-06-01 17:42 +08:00:       host: 'localhost:4000'
+2022-06-01 17:42 +08:00:     }
+2022-06-01 17:42 +08:00:   },
+2022-06-01 17:42 +08:00:   response: {
+2022-06-01 17:42 +08:00:     status: 404,
+2022-06-01 17:42 +08:00:     message: 'Not Found',
+2022-06-01 17:42 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:42 +08:00:   },
+2022-06-01 17:42 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:42 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:42 +08:00:   req: '<original node req>',
+2022-06-01 17:42 +08:00:   res: '<original node res>',
+2022-06-01 17:42 +08:00:   socket: '<original node socket>'
+2022-06-01 17:42 +08:00: }
+2022-06-01 17:42 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:42 +08:00:   errno: -4058,
+2022-06-01 17:42 +08:00:   code: 'ENOENT',
+2022-06-01 17:42 +08:00:   syscall: 'stat',
+2022-06-01 17:42 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:42 +08:00: } {
+2022-06-01 17:42 +08:00:   request: {
+2022-06-01 17:42 +08:00:     method: 'GET',
+2022-06-01 17:42 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:42 +08:00:     header: {
+2022-06-01 17:42 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:42 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:42 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:42 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:42 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:42 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:42 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:42 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:42 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:42 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:42 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:42 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:42 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:42 +08:00:       pragma: 'no-cache',
+2022-06-01 17:42 +08:00:       connection: 'close',
+2022-06-01 17:42 +08:00:       host: 'localhost:4000'
+2022-06-01 17:42 +08:00:     }
+2022-06-01 17:42 +08:00:   },
+2022-06-01 17:42 +08:00:   response: {
+2022-06-01 17:42 +08:00:     status: 404,
+2022-06-01 17:42 +08:00:     message: 'Not Found',
+2022-06-01 17:42 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:42 +08:00:   },
+2022-06-01 17:42 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:42 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:42 +08:00:   req: '<original node req>',
+2022-06-01 17:42 +08:00:   res: '<original node res>',
+2022-06-01 17:42 +08:00:   socket: '<original node socket>'
+2022-06-01 17:42 +08:00: }
+2022-06-01 17:42 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:42 +08:00:   errno: -4058,
+2022-06-01 17:42 +08:00:   code: 'ENOENT',
+2022-06-01 17:42 +08:00:   syscall: 'stat',
+2022-06-01 17:42 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:42 +08:00: } {
+2022-06-01 17:42 +08:00:   request: {
+2022-06-01 17:42 +08:00:     method: 'GET',
+2022-06-01 17:42 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:42 +08:00:     header: {
+2022-06-01 17:42 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:42 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:42 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:42 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:42 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:42 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:42 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:42 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:42 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:42 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:42 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:42 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:42 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:42 +08:00:       pragma: 'no-cache',
+2022-06-01 17:42 +08:00:       connection: 'close',
+2022-06-01 17:42 +08:00:       host: 'localhost:4000'
+2022-06-01 17:42 +08:00:     }
+2022-06-01 17:42 +08:00:   },
+2022-06-01 17:42 +08:00:   response: {
+2022-06-01 17:42 +08:00:     status: 404,
+2022-06-01 17:42 +08:00:     message: 'Not Found',
+2022-06-01 17:42 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:42 +08:00:   },
+2022-06-01 17:42 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:42 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:42 +08:00:   req: '<original node req>',
+2022-06-01 17:42 +08:00:   res: '<original node res>',
+2022-06-01 17:42 +08:00:   socket: '<original node socket>'
+2022-06-01 17:42 +08:00: }
+2022-06-01 17:43 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:43 +08:00:   errno: -4058,
+2022-06-01 17:43 +08:00:   code: 'ENOENT',
+2022-06-01 17:43 +08:00:   syscall: 'stat',
+2022-06-01 17:43 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:43 +08:00: } {
+2022-06-01 17:43 +08:00:   request: {
+2022-06-01 17:43 +08:00:     method: 'GET',
+2022-06-01 17:43 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:43 +08:00:     header: {
+2022-06-01 17:43 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:43 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:43 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:43 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:43 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:43 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:43 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:43 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:43 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:43 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:43 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:43 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:43 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:43 +08:00:       pragma: 'no-cache',
+2022-06-01 17:43 +08:00:       connection: 'close',
+2022-06-01 17:43 +08:00:       host: 'localhost:4000'
+2022-06-01 17:43 +08:00:     }
+2022-06-01 17:43 +08:00:   },
+2022-06-01 17:43 +08:00:   response: {
+2022-06-01 17:43 +08:00:     status: 404,
+2022-06-01 17:43 +08:00:     message: 'Not Found',
+2022-06-01 17:43 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:43 +08:00:   },
+2022-06-01 17:43 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:43 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:43 +08:00:   req: '<original node req>',
+2022-06-01 17:43 +08:00:   res: '<original node res>',
+2022-06-01 17:43 +08:00:   socket: '<original node socket>'
+2022-06-01 17:43 +08:00: }
+2022-06-01 17:43 +08:00: server error [Error: ENOENT: no such file or directory, stat 'E:\mobile\ProjectAdmin\ProjectManagement\views\index.html'] {
+2022-06-01 17:43 +08:00:   errno: -4058,
+2022-06-01 17:43 +08:00:   code: 'ENOENT',
+2022-06-01 17:43 +08:00:   syscall: 'stat',
+2022-06-01 17:43 +08:00:   path: 'E:\\mobile\\ProjectAdmin\\ProjectManagement\\views\\index.html'
+2022-06-01 17:43 +08:00: } {
+2022-06-01 17:43 +08:00:   request: {
+2022-06-01 17:43 +08:00:     method: 'GET',
+2022-06-01 17:43 +08:00:     url: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:43 +08:00:     header: {
+2022-06-01 17:43 +08:00:       cookie: 'Hm_lvt_db9ea85bc83188cbb64eb24ff9d54cb8=1651717561; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221809209e52d19-05a6ccb5d7bfe1-6b3e555b-2073600-1809209e52ea39%22%7D; BMAP_SECKEY=ZUQncjiM_Vhw4vVLXqPUcPK_ZRFcBwS5_8yacM6WlvyrMHTriH2nQcKC4aQLDGLjlqMZT0XMrAg9vP5vGmYqqyXVUe5mUu1GwBqORu5zCNZ-zKp89YOAs2eo9s1gpmhZv7z3z24_hFIMc075eAdVIWIiTu25TOr9Ocq4TggMAo83AHwSLaMCXw3D8hRKHHhm; SECKEY_ABVK=9MKQXOZZf9851B9hVqjRR/TZxF9AXA2ginjZ6Hy7UMk%3D; sidebarStatus=1; Admin-Token=AjsyHi3rG15Ql4T5Jv2vbf0NGFGUuLClL4ku2HT9Bo+bVpVqguEkzPFd0/qVIbb5rFvUICtquRRUEXabC0TBNTf67T5TZaRfpkfHLV+VUsF6PnQjeAH0iJuF6tGaeDe3/rnfTx6Jw1F6svGelRTVglj9qKUq+UAACgsmlkSLDZE=',
+2022-06-01 17:43 +08:00:       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-HK;q=0.6,zh-TW;q=0.5',
+2022-06-01 17:43 +08:00:       'accept-encoding': 'gzip, deflate, br',
+2022-06-01 17:43 +08:00:       referer: 'http://localhost:3000/',
+2022-06-01 17:43 +08:00:       'sec-fetch-dest': 'empty',
+2022-06-01 17:43 +08:00:       'sec-fetch-mode': 'cors',
+2022-06-01 17:43 +08:00:       'sec-fetch-site': 'same-origin',
+2022-06-01 17:43 +08:00:       'sec-ch-ua-platform': '"Windows"',
+2022-06-01 17:43 +08:00:       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36',
+2022-06-01 17:43 +08:00:       'sec-ch-ua-mobile': '?0',
+2022-06-01 17:43 +08:00:       accept: 'application/json, text/plain, */*',
+2022-06-01 17:43 +08:00:       'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
+2022-06-01 17:43 +08:00:       'cache-control': 'no-cache',
+2022-06-01 17:43 +08:00:       pragma: 'no-cache',
+2022-06-01 17:43 +08:00:       connection: 'close',
+2022-06-01 17:43 +08:00:       host: 'localhost:4000'
+2022-06-01 17:43 +08:00:     }
+2022-06-01 17:43 +08:00:   },
+2022-06-01 17:43 +08:00:   response: {
+2022-06-01 17:43 +08:00:     status: 404,
+2022-06-01 17:43 +08:00:     message: 'Not Found',
+2022-06-01 17:43 +08:00:     header: [Object: null prototype] {}
+2022-06-01 17:43 +08:00:   },
+2022-06-01 17:43 +08:00:   app: { subdomainOffset: 2, proxy: false, env: 'development' },
+2022-06-01 17:43 +08:00:   originalUrl: '/?currentPage=1&pageSize=10&pageTotal=0',
+2022-06-01 17:43 +08:00:   req: '<original node req>',
+2022-06-01 17:43 +08:00:   res: '<original node res>',
+2022-06-01 17:43 +08:00:   socket: '<original node socket>'
+2022-06-01 17:43 +08:00: }
+2022-06-02 11:36 +08:00: (node:3412) [MONGODB DRIVER] Warning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+2022-06-02 11:36 +08:00: (Use `node --trace-warnings ...` to show where the warning was created)

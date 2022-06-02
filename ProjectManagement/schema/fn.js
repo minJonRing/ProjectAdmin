@@ -21,15 +21,16 @@ const getList = async function (option, handle) {
   const { currentPage, pageSize } = option
   let { filter, sort } = handle || {}
   filter = { ...filter, isDelete: false }
-  sort = { ...sort, 'id': -1 }
+  sort = { 'id': -1, ...sort }
   return new Promise((r) => {
-    this.countDocuments(filter).exec((err, len) => {
+    this.countDocuments({}).exec((err, len) => {
       try {
         if (!err) {
-          this.find(filter).skip((currentPage - 1) * pageSize)
+          this.find({}).skip((currentPage - 1) * pageSize)
             .limit(pageSize - 0)
             .sort(sort)
             .exec((err, doc) => {
+
               try {
                 if (!err && doc) {
                   r({ status: 200, message: '数据请求成功', data: { list: doc, total: len } })
