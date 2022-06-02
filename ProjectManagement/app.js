@@ -7,6 +7,8 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyParser = require('koa-bodyparser')
 const logger = require('koa-logger')
+// redis
+const { getRedis } = require('./redis/index')
 // 数据库
 const mongoose = require("mongoose")
 // mongoose.set('useCreateIndex', true)
@@ -17,6 +19,7 @@ mongoose.connection.on("open", function () {
 })
 // 路由
 const index = require('./routes/index');
+const login = require('./routes/login');
 const users = require('./routes/users');
 const project = require('./routes/project');
 // 文件上传
@@ -37,6 +40,7 @@ app.use(views(__dirname + '/views', {
   map: { html: 'ejs' }
 }))
 
+
 // logger
 app.use(async (ctx, next) => {
   const start = new Date()
@@ -54,6 +58,7 @@ app.use(router.routes());
 app.use(upload.routes(), upload.allowedMethods())
 // 页面路径
 app.use(index.routes(), index.allowedMethods());
+app.use(login.routes(), login.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
 app.use(project.routes(), project.allowedMethods());
 

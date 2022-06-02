@@ -15,7 +15,7 @@ import {
 export default {
   name: "App",
   computed: {
-    ...mapGetters(["loading"]),
+    ...mapGetters(["loading", "token"]),
   },
   setup() {
     const store = useStore();
@@ -44,7 +44,7 @@ export default {
 <template>
   <el-container class="app">
     <el-header class="layout-head">
-      <el-card shadow="always" :body-style="{ padding: '18px' }">
+      <el-card v-if="token" shadow="always" :body-style="{ padding: '18px' }">
         <!-- 头像 用户信息 -->
         <el-space size="large" class="user">
           <el-avatar
@@ -110,10 +110,10 @@ export default {
     padding: 12px;
 
     .el-card {
-      background-image: url("./assets/banner.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
+      // background-image: url("./assets/banner.jpg");
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      // background-position: center center;
       ::v-deep(.el-card__body) {
         display: flex;
         align-items: center;

@@ -1,11 +1,14 @@
 <script>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, reactive } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { blur } from "tqr";
+import ajax from "@/request";
 export default {
   name: "info",
   setup(props) {
-    let form = ref({
+    const formRef = ref(null);
+
+    const form = reactive({
       username: "",
       password: "",
     });
@@ -14,13 +17,23 @@ export default {
       password: blur,
     });
 
-    const handleLogin = () => {};
+    const handleLogin = () => {
+      ajax({
+        url: "/login",
+        method: "post",
+        data: form,
+      }).then(({ data }) => {
+        console.log(data);
+      });
+    };
 
     onMounted(() => {});
 
     return {
+      formRef,
       form,
       rules,
+      handleLogin,
     };
   },
 };
@@ -28,7 +41,7 @@ export default {
 
 <template>
   <div class="login">
-    <el-form :model="form" ref="form" :rules="rules" label-width="60px">
+    <el-form :model="form" ref="formRef" :rules="rules" label-width="60px">
       <el-form-item label="欢迎登录" />
       <el-form-item label="用户名">
         <el-input v-model="form.username" placeholder="请输入" clearable />

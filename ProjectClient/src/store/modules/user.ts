@@ -1,10 +1,12 @@
-
+import { getToken } from '@/utils/token'
 
 interface State {
+  token: String,
   userInfo: Object
 }
 
 const state = {
+  token: getToken(),
   userInfo: {
     name: '',
     type: '',

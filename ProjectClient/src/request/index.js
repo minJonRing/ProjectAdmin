@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
-
+import store from '@/store'
+import { getToken } from '@/utils/token'
 
 const service = axios.create({
   baseURL: '/api'
@@ -10,6 +11,9 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     config.headers['Content-Type'] = 'application/json'
+    if (store.getters.token) {
+      config.headers['token'] = getToken()
+    }
     return config
   },
   error => {

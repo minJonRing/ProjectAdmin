@@ -1,0 +1,45 @@
+import router from './index'
+import store from '../store'
+import { getToken } from '@/utils/token' // get token from cookie
+
+import NProgress from 'nprogress' // progress bar
+import 'nprogress/nprogress.css' // progress bar style
+
+NProgress.configure({ showSpinner: false }) // NProgress Configuration
+
+router.beforeEach(async (to, from, next) => {
+  NProgress.start()
+  const hasToken = getToken()
+  if (hasToken) {
+    if (to.path === '/login') {
+      next({ path: '/' })
+      NProgress.done()
+    } else {
+      try {
+        await new Promise((resolve, reject) => {
+          ajax({
+            url: `/userInfo/getCurrentUserMenuTreeByMod/${store.getters.userType}`,
+            type: "get",
+          })
+            .then(({ data }) => {
+              const m = data && data.length > 0 ? data : [{}]
+              store.dispatch('user/setRoles', m)
+              resolve(m)
+            })
+        })
+        next({ ...to, replace: true })
+      } catch (error) {
+        await store.dispatch('user/resetToken')
+        next(`/login`)
+        NProgress.done()
+      }
+    }
+  } else {
+    next(`/login`)
+    NProgress.done()
+  }
+})
+
+router.afterEach(() => {
+  NProgress.done()
+})
