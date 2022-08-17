@@ -7,7 +7,7 @@ import 'vant/lib/index.css'
 
 import router from './router/index'
 import store from './store/index'
-
+import './router/permission' // permission control
 import global from '@/global'
 
 const root = createApp(App)

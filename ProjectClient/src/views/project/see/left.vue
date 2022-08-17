@@ -8,7 +8,6 @@ export default {
   components: {},
   setup(props) {
     const { form } = props;
-    console.log(props);
     return { form };
   },
 };

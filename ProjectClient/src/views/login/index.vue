@@ -1,12 +1,17 @@
 <script>
-import { ref, onMounted, reactive } from "vue";
+import { ref, onMounted, reactive, nextTick } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import { useStore } from "vuex";
+import { setToken } from "@/utils/token";
 import { blur } from "tqr";
 import ajax from "@/request";
 export default {
   name: "info",
   setup(props) {
     const formRef = ref(null);
+    const router = useRouter();
+
+    const store = useStore();
 
     const form = reactive({
       username: "",
@@ -23,10 +28,87 @@ export default {
         method: "post",
         data: form,
       }).then(({ data }) => {
-        console.log(data);
+        const { token } = data;
+        setToken(token);
+        nextTick(() => {
+          router.push("/project/list");
+        });
       });
     };
-
+    const data = [
+      {
+        id: 1,
+        label: "第一大级",
+        questionNum: "",
+        children: [
+          {
+            id: 2,
+            label: "1-I-1",
+            questionNum: "",
+            children: [
+              {
+                id: 4,
+                label: "1-I-1-I",
+                questionList: [{ label: "问题1" }, { label: "问题2" }],
+              },
+            ],
+          },
+          {
+            id: 3,
+            label: "1-II-1",
+            questionNum: "",
+            children: [
+              {
+                id: 5,
+                label: "1-I-1-I",
+                questionList: [
+                  { label: "问题2" },
+                  { label: "问题2" },
+                  { label: "问题2" },
+                  { label: "问题2" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 6,
+        label: "第二大级",
+        questionNum: "",
+        children: [
+          {
+            id: 7,
+            label: "1-I-1",
+            questionNum: "",
+            children: [
+              {
+                id: 9,
+                label: "1-I-1-I",
+                questionList: [{ label: "问题1" }, { label: "问题2" }],
+              },
+            ],
+          },
+          {
+            id: 8,
+            label: "1-II-1",
+            questionNum: "",
+            children: [
+              {
+                id: 10,
+                label: "1-I-1-I",
+                questionList: [
+                  { label: "问题2" },
+                  { label: "问题2" },
+                  { label: "问题2" },
+                  { label: "问题2" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ];
     onMounted(() => {});
 
     return {

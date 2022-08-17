@@ -23,10 +23,10 @@ const getList = async function (option, handle) {
   filter = { ...filter, isDelete: false }
   sort = { 'id': -1, ...sort }
   return new Promise((r) => {
-    this.countDocuments({}).exec((err, len) => {
+    this.countDocuments(filter).exec((err, len) => {
       try {
         if (!err) {
-          this.find({}).skip((currentPage - 1) * pageSize)
+          this.find(filter).skip((currentPage - 1) * pageSize)
             .limit(pageSize - 0)
             .sort(sort)
             .exec((err, doc) => {

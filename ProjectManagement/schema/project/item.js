@@ -24,7 +24,7 @@ projectItem.statics = {
   getDetail(option) {
     const { id } = option
     return new Promise((r) => {
-      this.find({ projectId: id }).populate('personnel')
+      this.find({ projectId: id, isDelete: false }).populate('personnel')
         .sort({ 'id': 1 })
         .exec((err, doc) => {
           try {

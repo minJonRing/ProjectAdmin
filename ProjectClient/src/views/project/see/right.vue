@@ -4,6 +4,9 @@ import { rulesT } from "tqr";
 import { blur, change } from "tqr";
 import { useDetail } from "@/hooks";
 import { useRoute, useRouter } from "vue-router";
+import global from "@/global";
+import ajax from "@/request";
+import { ElNotification } from "element-plus";
 import Question from "./zQuestion.vue";
 export default {
   name: "info",
@@ -87,8 +90,19 @@ export default {
       show.value = true;
     };
 
-    const handleItemDelete = () => {
-      show.value = true;
+    const handleItemDelete = (data) => {
+      const { id } = data;
+      global.loading = true;
+      ajax({
+        url: `/project/item/${id}`,
+        method: "delete",
+      })
+        .then(() => {
+          ElNotification.success("删除成功");
+        })
+        .finally(() => {
+          global.loading = false;
+        });
     };
 
     const handleItemAdd = () => {
@@ -237,9 +251,14 @@ export default {
               添加
             </el-button>
             <el-button @click.stop="handleItemEdit(data)"> 编辑 </el-button>
-            <el-button type="danger" @click="handleItemDelete(data)">
-              删除
-            </el-button>
+            <el-popconfirm
+              title="Are you sure to delete this?"
+              @confirm="handleItemDelete(data)"
+            >
+              <template #reference>
+                <el-button type="danger"> 删除 </el-button>
+              </template>
+            </el-popconfirm>
           </div>
         </span>
       </template>

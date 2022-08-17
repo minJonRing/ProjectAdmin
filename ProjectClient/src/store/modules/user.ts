@@ -1,4 +1,4 @@
-import { getToken } from '@/utils/token'
+import { setToken, getToken } from '@/utils/token'
 
 interface State {
   token: String,
@@ -15,16 +15,23 @@ const state = {
 }
 
 const mutations = {
-  SET_USER_INFO: (state: State, data: Object) => {
-    state.userInfo = data
+  SET_USER_INFO: (state: State, data: any) => {
+    console.log(data)
+    state.userInfo = data;
+  },
+  RESET_TOKEN: (state: State, data: any) => {
+    state.userInfo = {}
+    setToken('')
   },
 }
 
 const actions = {
-  login({ commit }: any, data: Object) {
+  getUserInfo({ commit }: any, data: Object) {
     commit('SET_USER_INFO', data)
   },
-
+  resetToken({ commit }: any, data: Object) {
+    commit('RESET_TOKEN')
+  },
 }
 
 export default {

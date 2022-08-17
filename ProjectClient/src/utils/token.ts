@@ -5,7 +5,7 @@ const setToken = (token: any) => {
 }
 
 const getToken = () => {
-  sessionStorage.getItem(KEY)
+  return sessionStorage.getItem(KEY)
 }
 
 const deleteToken = () => {

@@ -79,7 +79,11 @@ export default {
               <router-link :to="`edit?id=${i.id}`">
                 <el-button type="text" @click.stop>编辑</el-button>
               </router-link>
-              <el-button class="delete-btn" type="text" @click.stop>
+              <el-button
+                class="delete-btn"
+                type="text"
+                @click.stop="handleDelete(i.id)"
+              >
                 删除
               </el-button>
             </div>

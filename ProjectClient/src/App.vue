@@ -1,8 +1,13 @@
 <script>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import { reactive, ref } from "vue";
 import { mapGetters, useStore } from "vuex";
 import avatar from "@/assets/user.jpg";
+import { deleteToken } from "@/utils/token";
+import { ElNotification } from "element-plus";
+import { useRoute, useRouter } from "vue-router";
+import { userType } from "@/zd";
 import {
   User,
   Plus,
@@ -15,13 +20,24 @@ import {
 export default {
   name: "App",
   computed: {
-    ...mapGetters(["loading", "token"]),
+    ...mapGetters(["loading", "userInfo"]),
+    returnUserType() {
+      const value = userType.map(({ value }) => value);
+      return (this.userInfo.type || []).map((i) => {
+        const index = value.indexOf(i);
+        return userType[index];
+      });
+    },
   },
   setup() {
     const store = useStore();
-    const userInfo = store.state.user.userInfo;
+
+    const router = useRouter();
     const handleOut = () => {
-      console.log(1);
+      deleteToken("token");
+      store.dispatch("user/resetToken");
+      ElNotification.success("退出成功");
+      router.push("/login");
     };
     return {
       // 图标
@@ -31,12 +47,16 @@ export default {
       Star,
       CircleCheckFilled,
       SwitchButton,
-      //
-      userInfo,
       avatar,
+      sysTitle: "开发系统",
       // 退出登录
       handleOut,
     };
+  },
+  watch: {
+    userInfo(data) {
+      console.log(data);
+    },
   },
 };
 </script>
@@ -44,22 +64,23 @@ export default {
 <template>
   <el-container class="app">
     <el-header class="layout-head">
-      <el-card v-if="token" shadow="always" :body-style="{ padding: '18px' }">
+      <el-card shadow="always" :body-style="{ padding: '18px' }">
         <!-- 头像 用户信息 -->
         <el-space size="large" class="user">
-          <el-avatar
-            shape="square"
-            :size="80"
-            fit="cover"
+          <el-image
+            style="width: 60px; height: 60px"
             :src="userInfo?.avatar || avatar"
+            fit="cover"
           />
           <div class="user-info">
-            <el-tag>前端</el-tag>
-            <div>{{ userInfo.name }}</div>
+            <el-tag v-for="i in returnUserType" :type="i.type" :key="i">
+              {{ i.label }}
+            </el-tag>
+            <div>{{ userInfo.name || `欢迎访问${sysTitle}` }}</div>
           </div>
         </el-space>
         <!-- 项目进程 -->
-        <el-space size="large" class="user">
+        <el-space v-if="userInfo.name" size="large" class="user">
           <div class="user-project">
             <router-link class="item" to="/user">
               <el-tooltip content="用户" placement="top" effect="light">
@@ -123,6 +144,9 @@ export default {
             font-size: 14px;
             .el-tag {
               margin-bottom: 18px;
+              & + .el-tag {
+                margin-left: 12px;
+              }
             }
           }
         }

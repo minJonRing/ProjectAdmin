@@ -7,8 +7,10 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyParser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const koaJwt = require("koa-jwt")
 // redis
 const { getRedis } = require('./redis/index')
+
 // 数据库
 const mongoose = require("mongoose")
 // mongoose.set('useCreateIndex', true)
@@ -44,14 +46,18 @@ app.use(views(__dirname + '/views', {
 // logger
 app.use(async (ctx, next) => {
   const start = new Date()
-  await next()
+  await next().catch((err) => {
+    if (err.status == '401') {
+      ctx.body = { status: 201, message: '请先登录' }
+    }
+  })
   const ms = new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
-router.post('/post', async (ctx, next) => {
-  console.log(ctx.request.body)
-  ctx.response.body = ctx.request.body
-});
+
+app.use(koaJwt({ secret: 'admin' }).unless({
+  path: [/^\/login/]
+}))
 app.use(router.routes());
 // routes
 // 文件上传
