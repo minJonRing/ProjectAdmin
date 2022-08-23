@@ -26,6 +26,48 @@ const routes = [
     },
   },
   {
+    path: '/article',
+    name: 'Article',
+    component: () => import('@/views/index.vue'),
+    meta: {
+      title: '文章'
+    },
+    children: [
+      {
+        path: 'list',
+        name: 'ArticleList',
+        component: () => import('@/views/article/index.vue'),
+        meta: {
+          title: '添加文章'
+        }
+      },
+      {
+        path: 'add',
+        name: 'ArticleAdd',
+        component: () => import('@/views/article/add.vue'),
+        meta: {
+          title: '添加文章'
+        }
+      },
+      {
+        path: 'edit',
+        name: 'ArticleEdit',
+        component: () => import('@/views/article/edit.vue'),
+        meta: {
+          title: '编辑文章'
+        }
+      },
+      {
+        path: 'see',
+        name: 'ArticleSee',
+        component: () => import('@/views/article/see.vue'),
+        meta: {
+          title: '查看文章'
+        }
+      }
+    ]
+  },
+  {
     path: '/project',
     name: 'Project',
     component: () => import('@/views/index.vue'),

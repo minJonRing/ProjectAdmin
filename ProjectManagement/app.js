@@ -21,6 +21,7 @@ mongoose.connection.on("open", function () {
 })
 // 路由
 const index = require('./routes/index');
+const article = require('./routes/article');
 const login = require('./routes/login');
 const users = require('./routes/users');
 const project = require('./routes/project');
@@ -56,7 +57,7 @@ app.use(async (ctx, next) => {
 })
 
 app.use(koaJwt({ secret: 'admin' }).unless({
-  path: [/^\/login/]
+  path: [/^(\/login|\/upload)/]
 }))
 app.use(router.routes());
 // routes
@@ -64,6 +65,7 @@ app.use(router.routes());
 app.use(upload.routes(), upload.allowedMethods())
 // 页面路径
 app.use(index.routes(), index.allowedMethods());
+app.use(article.routes(), article.allowedMethods());
 app.use(login.routes(), login.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
 app.use(project.routes(), project.allowedMethods());

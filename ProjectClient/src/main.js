@@ -10,6 +10,7 @@ import store from './store/index'
 import './router/permission' // permission control
 import global from '@/global'
 
+
 const root = createApp(App)
 
 root.config.globalProperties.$global = global

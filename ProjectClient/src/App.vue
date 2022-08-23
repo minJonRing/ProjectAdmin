@@ -15,6 +15,7 @@ import {
   Star,
   CircleCheckFilled,
   SwitchButton,
+  Reading,
 } from "@element-plus/icons-vue";
 
 export default {
@@ -41,6 +42,7 @@ export default {
     };
     return {
       // 图标
+      Reading,
       User,
       Plus,
       Search,
@@ -82,6 +84,11 @@ export default {
         <!-- 项目进程 -->
         <el-space v-if="userInfo.name" size="large" class="user">
           <div class="user-project">
+            <router-link class="item" to="/article/list">
+              <el-tooltip content="文章" placement="top" effect="light">
+                <el-button :icon="Reading" />
+              </el-tooltip>
+            </router-link>
             <router-link class="item" to="/user">
               <el-tooltip content="用户" placement="top" effect="light">
                 <el-button :icon="User" />
