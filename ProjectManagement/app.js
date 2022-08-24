@@ -47,18 +47,18 @@ app.use(views(__dirname + '/views', {
 // logger
 app.use(async (ctx, next) => {
   const start = new Date()
-  await next().catch((err) => {
-    if (err.status == '401') {
-      ctx.body = { status: 201, message: '请先登录' }
-    }
-  })
+  // await next().catch((err) => {
+  //   if (err.status == '401') {
+  //     ctx.body = { status: 201, message: '请先登录' }
+  //   }
+  // })
   const ms = new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
 
-app.use(koaJwt({ secret: 'admin' }).unless({
-  path: [/^(\/login|\/upload|\/user)/]
-}))
+// app.use(koaJwt({ secret: 'admin' }).unless({
+//   path: [/^(\/login|\/upload|\/user|\/api)/]
+// }))
 app.use(router.routes());
 // routes
 // 文件上传
