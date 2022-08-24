@@ -3,7 +3,7 @@ import Info from "./info.vue";
 import { ref } from "vue";
 import { useSearch } from "@/hooks";
 export default {
-  name: "article",
+  name: "ArticleList",
   components: {
     Info,
   },

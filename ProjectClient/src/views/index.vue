@@ -1,6 +1,7 @@
 <template>
+  <!-- <router-view :key="key" /> -->
   <keep-alive>
-    <router-view :key="key" />
+    <router-view />
   </keep-alive>
 </template>
 

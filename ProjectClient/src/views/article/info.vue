@@ -8,7 +8,6 @@ import { useRoute, useRouter } from "vue-router";
 // do not use same name with ref
 import "@wangeditor/editor/dist/css/style.css"; // 引入 css
 import { Editor, Toolbar } from "@wangeditor/editor-for-vue";
-import { getToken } from "@/utils/token";
 export default {
   name: "info",
   components: {
@@ -123,6 +122,10 @@ export default {
     const handleCreated = (editor) => {
       editorRef.value = editor; // 记录 editor 实例，重要！
     };
+
+    const handleBlur = (val) => {
+      console.log(val.getHtml());
+    };
     return {
       // 数据
       formRef,
@@ -135,6 +138,7 @@ export default {
       toolbarConfig,
       editorConfig,
       handleCreated,
+      handleBlur,
     };
   },
 };
@@ -184,6 +188,7 @@ export default {
               :defaultConfig="editorConfig"
               :mode="mode"
               @onCreated="handleCreated"
+              @onChange="handleBlur"
             />
           </div>
         </el-form-item>
