@@ -5,6 +5,7 @@ import { useStore } from "vuex";
 import { setToken } from "@/utils/token";
 import { blur } from "tqr";
 import ajax from "@/request";
+import { useDetail } from "@/hooks";
 export default {
   name: "info",
   setup(props) {
@@ -35,7 +36,18 @@ export default {
         });
       });
     };
-    onMounted(() => {});
+    const { handleDetail, submit } = useDetail("/user");
+    onMounted(() => {
+      submit({
+        username: "admin",
+        password: "admin123",
+        name: "admin",
+        type: [],
+        avatar: "",
+      }).then((data) => {
+        r(data);
+      });
+    });
 
     return {
       formRef,
