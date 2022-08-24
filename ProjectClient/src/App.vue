@@ -71,7 +71,7 @@ export default {
         <el-space size="large" class="user">
           <el-image
             style="width: 60px; height: 60px"
-            :src="userInfo?.avatar || avatar"
+            :src="userInfo ? userInfo.avatar : avatar"
             fit="cover"
           />
           <div class="user-info">

@@ -1,0 +1,1 @@
+import{_ as o}from"./index.b8a71ea8.js";import{f as r,i as t,S as n,g as a,o as s}from"./vendor.8f73d791.js";const c={name:"Index",computed:{key(){return this.$route.path}}};function p(_,i,u,m,d,f){const e=a("router-view");return s(),r(n,null,[t(e)],1024)}var x=o(c,[["render",p]]);export{x as default};

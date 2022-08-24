@@ -143,17 +143,17 @@ export default {
         </el-table-column>
         <el-table-column prop="propose" label="提出人">
           <template #default="{ row: { propose } }">
-            {{ propose?.name }}
+            {{ propose ? propose.name : "" }}
           </template>
         </el-table-column>
         <el-table-column prop="solve" label="修改人">
           <template #default="{ row: { solve } }">
-            {{ solve?.name }}
+            {{ solve ? solve.name : "" }}
           </template>
         </el-table-column>
         <el-table-column prop="confirm" label="确认人">
           <template #default="{ row: { confirm } }">
-            {{ confirm?.name }}
+            {{ confirm ? confirm.name : "" }}
           </template>
         </el-table-column>
         <el-table-column label="操作">
