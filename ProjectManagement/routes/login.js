@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken")
 const secret = "admin"
 
 
-router.post('/login', async (ctx, next) => {
+router.post('/api/login', async (ctx, next) => {
   await next()
   const { username, password } = ctx.request.body;
   const data = await new Promise((r, reject) => {

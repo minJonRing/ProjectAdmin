@@ -3,7 +3,7 @@ const project = require('../schema/project/index')
 const projectItem = require('../schema/project/item')
 const question = require('../schema/project/question')
 
-router.prefix('/project')
+router.prefix('/api/project')
 
 // 项目
 router.get('/', async (ctx, next) => {

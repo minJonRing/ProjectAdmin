@@ -3,8 +3,8 @@ const formidable = require('formidable')
 const path = require("path")
 const config = require("../../config.js")
 // 上传封面
-router.post("/upload/img", upload('image'));
-router.post("/upload/video", upload('video'));
+router.post("/api/upload/img", upload('image'));
+router.post("/api/upload/video", upload('video'));
 
 function upload(url) {
   return async function (ctx, next) {

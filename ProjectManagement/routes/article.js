@@ -1,6 +1,6 @@
 const router = require('koa-router')()
 const article = require('../schema/article')
-router.prefix('/article')
+router.prefix('/api/article')
 
 router.get('/', async (ctx, next) => {
   await next()
