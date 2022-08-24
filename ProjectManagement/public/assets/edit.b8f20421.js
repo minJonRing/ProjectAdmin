@@ -1,0 +1,1 @@
+import{I as o}from"./info.7b3d7cd8.js";import{f as r,o as t}from"./vendor.d8f33275.js";import"./index.80c0a870.js";import"./index.80bda23c.js";import"./rules.a17129b4.js";import"./detail.c4cf94b4.js";const _={setup(p){return(e,m)=>(t(),r(o))}};export{_ as default};
