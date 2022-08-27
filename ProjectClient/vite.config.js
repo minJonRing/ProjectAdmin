@@ -12,12 +12,8 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:4000',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        rewrite: (path) => path.replace(/^\/api/, '/api')
       },
-      '/upload': {
-        target: 'http://localhost:4000',
-        changeOrigin: true,
-      }
     }
   },
   resolve: {
