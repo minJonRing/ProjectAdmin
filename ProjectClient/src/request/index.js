@@ -1,7 +1,11 @@
 import axios from 'axios'
-import { ElMessage } from 'element-plus'
+import {
+  ElMessage
+} from 'element-plus'
 import store from '@/store'
-import { getToken } from '@/utils/token'
+import {
+  getToken
+} from '@/utils/token'
 
 const service = axios.create({
   baseURL: '/api'
@@ -28,24 +32,35 @@ service.interceptors.response.use(
     const res = response.data;
     if (res.status !== 200) {
       ElMessage({
-        message: res.message || "错误代码" + res.status,
+        message: res.msg || "错误代码" + res.status,
         type: 'error',
         showClose: true,
         duration: 5 * 1000
       })
-      return Promise.reject(res.message || "错误代码" + res.code)
+      return Promise.reject(res.msg || "错误代码" + res.code)
     } else {
       return res
     }
   },
   error => {
-    const { response } = JSON.parse(JSON.stringify(error));
-    const { data } = response || {}
-    const { message, status } = data
+    let _message = "";
+    try {
+      const {
+        response,
+        message
+      } = error;
+      const {
+        data
+      } = response || {}
+      const dataMessage = data.message
+      _message = dataMessage || message || (response ? '网络错误，请联系管理员。' : '请求超时')
+    } catch (error) {
+      _message = "网络错误，请联系管理员。"
+    }
     // 网络不通，提示信息
     ElMessage({
       type: 'error',
-      message: message || '网络错误，请联系管理员。',
+      message: _message || '网络错误，请联系管理员。',
       showClose: true,
       duration: 5 * 1000
     })

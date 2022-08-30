@@ -1,7 +1,10 @@
 const KEY: string = 'token'
 
 const setToken = (token: any) => {
-  sessionStorage.setItem(KEY, token)
+  return new Promise((r) => {
+    sessionStorage.setItem(KEY, token)
+    r(token)
+  })
 }
 
 const getToken = () => {
@@ -9,7 +12,10 @@ const getToken = () => {
 }
 
 const deleteToken = () => {
-  sessionStorage.removeItem(KEY)
+  return new Promise((r) => {
+    sessionStorage.removeItem(KEY)
+    r()
+  })
 }
 
 export {

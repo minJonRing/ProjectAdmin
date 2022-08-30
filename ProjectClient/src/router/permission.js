@@ -1,36 +1,62 @@
 import router from './index'
 import store from '../store'
-import { getToken } from '@/utils/token' // get token from cookie
+import {
+  getToken,
+  setToken
+} from '@/utils/token' // get token from cookie
 
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 import ajax from "@/request";
-NProgress.configure({ showSpinner: false }) // NProgress Configuration
+NProgress.configure({
+  showSpinner: false
+}) // NProgress Configuration
 
 router.beforeEach(async (to, from, next) => {
   NProgress.start()
   const hasToken = getToken()
+  console.log(hasToken)
   if (hasToken) {
     if (to.path === '/login') {
-      next({ path: '/' })
+      next({
+        path: '/'
+      })
       NProgress.done()
     } else {
       const hasRoles = store.getters.userInfo.name
+      console.log(hasRoles)
       if (hasRoles) {
         next()
       } else {
         try {
-          await new Promise((resolve, reject) => {
+          const userInfo = await new Promise((resolve, reject) => {
             ajax({
-              url: `/userinfo`,
-              type: "get",
-            })
-              .then(({ data }) => {
-                store.dispatch('user/getUserInfo', data)
+                url: `/userinfo`,
+                type: "get",
+              })
+              .then(({
+                data
+              }) => {
+                resolve(data)
+              }).catch(() => {
                 resolve()
               })
           })
-          next({ ...to, replace: true })
+          store.dispatch('user/getUserInfo', userInfo)
+          console.log(userInfo)
+          if (!userInfo) {
+            // store.dispatch('user/resetToken')
+            // next({
+            //   path: '/'
+            // })
+            next()
+          } else {
+            next({
+              ...to,
+              replace: true
+            })
+          }
+          NProgress.done()
         } catch (error) {
           await store.dispatch('user/resetToken')
           next(`/login`)

@@ -5,22 +5,27 @@ interface State {
   userInfo: Object
 }
 
+const userInfo: any = {
+  name: '',
+  type: '',
+  avatar: ''
+}
+
 const state = {
   token: getToken(),
   userInfo: {
-    name: '',
-    type: '',
-    avatar: ''
+    ...userInfo
   },
 }
 
 const mutations = {
   SET_USER_INFO: (state: State, data: any) => {
-    console.log(data)
-    state.userInfo = data;
+    state.userInfo = { ...userInfo, ...data };
   },
-  RESET_TOKEN: (state: State, data: any) => {
-    state.userInfo = {}
+  RESET_TOKEN: (state: State) => {
+    state.userInfo = {
+      ...userInfo
+    }
     setToken('')
   },
 }

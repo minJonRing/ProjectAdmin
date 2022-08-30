@@ -1,6 +1,9 @@
-import { defineConfig } from 'vite'
+import {
+  defineConfig
+} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path';
+
 function pathResolve(dir) {
   return resolve(__dirname, '.', dir);
 }
@@ -12,7 +15,7 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:4000',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
+        // rewrite: (path) => path.replace(/^\/api/, '/api')
       },
     }
   },
