@@ -25,7 +25,7 @@ export default {
     });
 
     const rules = reactive({
-      cover: blur,
+      // cover: blur,
       title: blur,
       type: change,
       cont: blur,
