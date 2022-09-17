@@ -62,7 +62,7 @@ app.use(async (ctx, next) => {
 app.use(koaJwt({
   secret: 'admin'
 }).unless({
-  path: [/^(\/api\/login|\/api\/user)/]
+  path: [/^(\/|\/api\/login|\/api\/user)/]
 }))
 app.use(router.routes());
 // routes
