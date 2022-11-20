@@ -30,6 +30,7 @@ export default {
         data: form
       }).then(({ data }) => {
         const { token } = data
+        store.dispatch('user/setToken', token)
         setToken(token).then(data => {
           router.push('/article/list')
         })

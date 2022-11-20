@@ -1,128 +1,127 @@
 <script>
-import { reactive, ref, onMounted } from "vue";
-import { rulesT } from "tqr";
-import { blur, change } from "tqr";
-import { useDetail } from "@/hooks";
-import { useRoute, useRouter } from "vue-router";
-import global from "@/global";
-import ajax from "@/request";
-import { ElNotification } from "element-plus";
-import Question from "./zQuestion.vue";
+import { reactive, ref, onMounted } from 'vue'
+import { rulesT } from 'tqr'
+import { blur, change } from 'tqr'
+import { useDetail } from '@/hooks'
+import { useRoute, useRouter } from 'vue-router'
+import global from '@/global'
+import ajax from '@/request'
+import { ElNotification } from 'element-plus'
+import Question from './zQuestion.vue'
 export default {
-  name: "info",
+  name: 'info',
   props: {
     db: rulesT.Object,
-    read: rulesT.Boolean,
+    read: rulesT.Boolean
   },
   components: {
-    Question,
+    Question
   },
   setup(props) {
-    const { db } = props;
-    const { personnelList, personnel } = db;
-    const { handleDetail, submit } = useDetail("/project/item");
+    const { db } = props
+    const { personnelList, personnel } = db
+    const { handleDetail, submit } = useDetail('/project/item')
 
-    const route = useRoute();
+    const route = useRoute()
 
-    const router = useRouter();
+    const router = useRouter()
 
-    const { id } = route.query;
+    const { id } = route.query
     // 树形数据
-    const tree = ref([{ label: 1 }]);
+    const tree = ref([{ label: 1 }])
     // // 新增、编辑、删除数据
-    const itemRef = ref(null);
-    const show = ref(false);
+    const itemRef = ref(null)
+    const show = ref(false)
 
     const form = ref({
       projectId: id,
       parentId: 0,
-      name: "",
-      personnel: [],
-    });
+      name: '',
+      personnel: []
+    })
 
     const rules = ref({
       name: blur,
-      personnel: change,
-    });
+      personnel: change
+    })
 
     const handleShow = () => {
       form.value = {
         ...form.value,
         parentId: 0,
-        name: "",
-        personnel: [],
-      };
-      show.value = true;
-    };
+        name: '',
+        personnel: []
+      }
+      show.value = true
+    }
 
     const getDetail = () => {
-      handleDetail(id).then((data) => {
-        const { list } = data;
+      handleDetail(id).then(data => {
+        const { list } = data
         tree.value = toTreeData(list, {
-          id: "id",
-          parent: "parentId",
-          name: "name",
-          root: 0,
-        });
-      });
-    };
+          id: 'id',
+          parent: 'parentId',
+          name: 'name',
+          root: 0
+        })
+      })
+    }
 
     const handleRe = () => {
-      getDetail();
-    };
+      getDetail()
+    }
 
-    const handleItemReAdd = (data) => {
-      console.log(data);
+    const handleItemReAdd = data => {
       form.value = {
         ...form.value,
         parentId: data.id,
-        name: "",
-        personnel: [],
-      };
-      show.value = true;
-    };
+        name: '',
+        personnel: []
+      }
+      show.value = true
+    }
 
-    const handleItemEdit = (data) => {
+    const handleItemEdit = data => {
       form.value = {
         ...data,
-        personnel: data.personnel.map(({ _id }) => _id),
-      };
-      show.value = true;
-    };
+        personnel: data.personnel.map(({ _id }) => _id)
+      }
+      show.value = true
+    }
 
-    const handleItemDelete = (data) => {
-      const { id } = data;
-      global.loading = true;
+    const handleItemDelete = data => {
+      const { id } = data
+      global.loading = true
       ajax({
         url: `/project/item/${id}`,
-        method: "delete",
+        method: 'delete'
       })
         .then(() => {
-          ElNotification.success("删除成功");
+          ElNotification.success('删除成功')
         })
         .finally(() => {
-          global.loading = false;
-        });
-    };
+          global.loading = false
+        })
+    }
 
     const handleItemAdd = () => {
       itemRef.value.validate((valid, fields) => {
         if (valid) {
           submit({
-            ...form.value,
-          }).then((data) => {
-            show.value = false;
-          });
+            ...form.value
+          }).then(data => {
+            show.value = false
+          })
         } else {
-          console.log("表单验证失败!", fields);
-          j("表单验证失败!");
+          console.log('表单验证失败!', fields)
+          j('表单验证失败!')
         }
-      });
-    };
+      })
+    }
     // 生成树状函数
     const toTreeData = (data, attr) => {
-      let tree = [];
-      let resData = data;
+      let tree = []
+      let resData = data
       // 生成第一层数据
       for (let i = 0; i < resData.length; i++) {
         if (resData[i][attr.parent] === attr.root) {
@@ -130,15 +129,15 @@ export default {
             ...resData[i],
             id: resData[i][attr.id],
             label: resData[i][attr.name],
-            children: [],
-          };
-          tree.push(obj);
-          resData.splice(i, 1);
-          i--;
+            children: []
+          }
+          tree.push(obj)
+          resData.splice(i, 1)
+          i--
         }
       }
       // 递归
-      var run = function (treeArr) {
+      var run = function(treeArr) {
         if (resData.length > 0) {
           for (let i = 0; i < treeArr.length; i++) {
             for (let j = 0; j < resData.length; j++) {
@@ -147,40 +146,40 @@ export default {
                   ...resData[j],
                   id: resData[j][attr.id],
                   label: resData[j][attr.name],
-                  children: [],
-                };
-                treeArr[i].children.push(obj);
-                resData.splice(j, 1);
-                j--;
+                  children: []
+                }
+                treeArr[i].children.push(obj)
+                resData.splice(j, 1)
+                j--
               }
             }
-            run(treeArr[i].children);
+            run(treeArr[i].children)
           }
         }
-      };
-      run(tree);
+      }
+      run(tree)
       // 返回数据
-      return tree;
-    };
+      return tree
+    }
 
     // 问题
-    const question = ref(false);
+    const question = ref(false)
     const questionIds = ref({
-      itemId: "",
-      projectId: "",
-    });
-    const handleAddQuestion = (data) => {
-      const { id, projectId } = data;
+      itemId: '',
+      projectId: ''
+    })
+    const handleAddQuestion = data => {
+      const { id, projectId } = data
       questionIds.value = {
         itemId: id,
-        projectId,
-      };
-      question.value = true;
-    };
+        projectId
+      }
+      question.value = true
+    }
     // 挂载完成
     onMounted(() => {
-      id && getDetail();
-    });
+      id && getDetail()
+    })
     // 添加项目
 
     return {
@@ -199,16 +198,19 @@ export default {
       handleItemDelete,
       question,
       handleAddQuestion,
-      questionIds,
-    };
-  },
-};
+      questionIds
+    }
+  }
+}
 </script>
 
 <template>
   <div class="project-right">
     <div>
-      <el-button type="primary" @click="handleShow">添加目录</el-button>
+      <el-button
+        type="primary"
+        @click="handleShow"
+      >添加目录</el-button>
       <el-button @click="handleRe">刷新</el-button>
     </div>
     <el-tree :data="tree">
@@ -217,7 +219,10 @@ export default {
           <div class="tree-info">
             <span>{{ node.label }}</span>
           </div>
-          <div class="tree-edit" @click.stop>
+          <div
+            class="tree-edit"
+            @click.stop
+          >
             <div class="personnel-list">
               <!-- <div style="font-size: 13px">参与人员:</div> -->
               <el-card
@@ -247,7 +252,10 @@ export default {
             >
               问题：22/31
             </el-button>
-            <el-button type="primary" @click.stop="handleItemReAdd(data)">
+            <el-button
+              type="primary"
+              @click.stop="handleItemReAdd(data)"
+            >
               添加
             </el-button>
             <el-button @click.stop="handleItemEdit(data)"> 编辑 </el-button>
@@ -264,10 +272,25 @@ export default {
       </template>
     </el-tree>
     <!-- 添加目录 -->
-    <el-dialog v-model="show" title="目录" width="400px">
-      <el-form :model="form" ref="itemRef" :rules="rules">
-        <el-form-item label="目录名称" prop="name">
-          <el-input v-model="form.name" placeholder="请输入" clearable />
+    <el-dialog
+      v-model="show"
+      title="目录"
+      width="400px"
+    >
+      <el-form
+        :model="form"
+        ref="itemRef"
+        :rules="rules"
+      >
+        <el-form-item
+          label="目录名称"
+          prop="name"
+        >
+          <el-input
+            v-model="form.name"
+            placeholder="请输入"
+            clearable
+          />
         </el-form-item>
         <el-form-item label="负责人员">
           <el-select
@@ -289,12 +312,19 @@ export default {
       <template #footer>
         <span class="dialog-footer">
           <el-button @click="show = false">取消</el-button>
-          <el-button type="primary" @click="handleItemAdd">确认</el-button>
+          <el-button
+            type="primary"
+            @click="handleItemAdd"
+          >确认</el-button>
         </span>
       </template>
     </el-dialog>
     <!-- 添加问题 -->
-    <el-dialog title="问题" v-model="question" width="1200px">
+    <el-dialog
+      title="问题"
+      v-model="question"
+      width="1200px"
+    >
       <Question :questionIds="questionIds" />
     </el-dialog>
   </div>

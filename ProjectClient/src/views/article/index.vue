@@ -24,7 +24,6 @@ export default {
         title: "",
       },
     });
-    console.log(table);
 
     return {
       search,

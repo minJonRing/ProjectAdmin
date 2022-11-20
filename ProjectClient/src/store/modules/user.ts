@@ -22,10 +22,14 @@ const mutations = {
   SET_USER_INFO: (state: State, data: any) => {
     state.userInfo = { ...userInfo, ...data };
   },
+  SET_TOKEN: (state: State, token: string) => {
+    state.token = token
+  },
   RESET_TOKEN: (state: State) => {
     state.userInfo = {
       ...userInfo
     }
+    state.token = ""
     setToken('')
   },
 }
@@ -34,7 +38,10 @@ const actions = {
   getUserInfo({ commit }: any, data: Object) {
     commit('SET_USER_INFO', data)
   },
-  resetToken({ commit }: any, data: Object) {
+  setToken({ commit }: any, token: string) {
+    commit('SET_TOKEN', token)
+  },
+  resetToken({ commit }: any) {
     commit('RESET_TOKEN')
   },
 }

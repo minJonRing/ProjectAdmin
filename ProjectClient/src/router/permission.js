@@ -15,7 +15,6 @@ NProgress.configure({
 router.beforeEach(async (to, from, next) => {
   NProgress.start()
   const hasToken = getToken()
-  console.log(hasToken)
   if (hasToken) {
     if (to.path === '/login') {
       next({
@@ -24,7 +23,6 @@ router.beforeEach(async (to, from, next) => {
       NProgress.done()
     } else {
       const hasRoles = store.getters.userInfo.name
-      console.log(hasRoles)
       if (hasRoles) {
         next()
       } else {
@@ -43,7 +41,6 @@ router.beforeEach(async (to, from, next) => {
               })
           })
           store.dispatch('user/getUserInfo', userInfo)
-          console.log(userInfo)
           if (!userInfo) {
             // store.dispatch('user/resetToken')
             // next({
@@ -65,7 +62,7 @@ router.beforeEach(async (to, from, next) => {
       }
     }
   } else {
-    if (['/login'].includes(to.path)) {
+    if (['/login', '/dome'].includes(to.path)) {
       next()
     } else {
       next(`/login`)
