@@ -58,7 +58,7 @@ router.beforeEach(async (to, from, next) => {
       }
     }
   } else {
-    if (['/login'].includes(to.path)) {
+    if (['/login', '/dome'].includes(to.path)) {
       next()
     } else {
       next(`/login`)

@@ -1,29 +1,29 @@
 <script>
-import { reactive, ref, onMounted } from "vue";
-import { rulesT } from "tqr";
-import { blur, change } from "tqr";
-import { useDetail, useSearch } from "@/hooks";
-import { useRoute, useRouter } from "vue-router";
-import { Upload } from "@element-plus/icons-vue";
-import UploadFile from "@/views/upload/index.vue";
+import { reactive, ref, onMounted } from 'vue'
+import { rulesT } from 'tqr'
+import { blur, change } from 'tqr'
+import { useDetail, useSearch } from '@/hooks'
+import { useRoute, useRouter } from 'vue-router'
+import { Upload } from '@element-plus/icons-vue'
+import UploadFile from '@/views/upload/index.vue'
 export default {
-  name: "info",
+  name: 'info',
   props: {
-    questionIds: rulesT.Object,
+    questionIds: rulesT.Object
   },
   components: {
     Upload,
-    UploadFile,
+    UploadFile
   },
   setup(props) {
     const {
-      questionIds: { itemId, projectId },
-    } = props;
+      questionIds: { itemId, projectId }
+    } = props
 
     // 页面显示
-    const addScreen = ref(false);
+    const addScreen = ref(false)
 
-    const { handleDetail, submit } = useDetail("/project/question/path");
+    const { handleDetail, submit } = useDetail('/project/question/path')
     const {
       search,
       handleSearch,
@@ -32,69 +32,68 @@ export default {
       pagination,
       handleCurrentChange,
       handleSizeChange,
-      handleDelete,
+      handleDelete
     } = useSearch({
-      url: "/project/question/path",
+      url: '/project/question/path',
       searchParam: {
         projectId,
-        name: "",
-        status: "",
-      },
-    });
-    console.log(table);
+        name: '',
+        status: ''
+      }
+    })
 
     // // 新增、编辑、删除数据
-    const formRef = ref(null);
+    const formRef = ref(null)
 
     const form = ref({
       itemId,
       projectId,
-      name: "",
-      describe: "",
-      treat: "",
+      name: '',
+      describe: '',
+      treat: '',
       fileList: [],
-      status: 0,
-    });
+      status: 0
+    })
 
     const rules = ref({
       name: blur,
       describe: blur,
-      treat: blur,
-    });
+      treat: blur
+    })
 
-    const handleSee = (data) => {
-      form.value = data;
-      addScreen.value = true;
-    };
+    const handleSee = data => {
+      form.value = data
+      addScreen.value = true
+    }
 
     const handleSubmit = () => {
       formRef.value.validate((valid, fields) => {
         if (valid) {
-          const personnel = ["propose", "solve", "confirm"][form.value.status];
+          const personnel = ['propose', 'solve', 'confirm'][form.value.status]
           const data = {
             ...form.value,
-            [personnel]: "629068c83f517a3de6d77310",
-          };
+            [personnel]: '629068c83f517a3de6d77310'
+          }
           submit(data).then(() => {
             form.value = {
               itemId,
               projectId,
-              name: "",
-              describe: "",
-              treat: "",
+              name: '',
+              describe: '',
+              treat: '',
               fileList: [],
-              status: 0,
-            };
-            handleSearch();
-          });
+              status: 0
+            }
+            handleSearch()
+          })
         } else {
-          console.log("表单验证失败!", fields);
+          console.log('表单验证失败!', fields)
         }
-      });
-    };
+      })
+    }
 
     // 挂载完成
-    onMounted(() => {});
+    onMounted(() => {})
     // 添加项目
 
     return {
@@ -112,53 +111,97 @@ export default {
       formRef,
       form,
       rules,
-      handleSubmit,
-    };
-  },
-};
+      handleSubmit
+    }
+  }
+}
 </script>
 
 <template>
   <div :class="['question', addScreen ? 'add' : '']">
-    <div class="left" @click.stop="addScreen = false">
-      <el-form class="search" :model="search" inline>
+    <div
+      class="left"
+      @click.stop="addScreen = false"
+    >
+      <el-form
+        class="search"
+        :model="search"
+        inline
+      >
         <el-form-item label="名称">
-          <el-input v-model="search.name" clearable placeholder="请输入" />
+          <el-input
+            v-model="search.name"
+            clearable
+            placeholder="请输入"
+          />
         </el-form-item>
         <el-form-item label="状态">
-          <el-input v-model="search.name" clearable placeholder="请输入" />
+          <el-input
+            v-model="search.name"
+            clearable
+            placeholder="请输入"
+          />
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="handleSearch">查询</el-button>
+          <el-button
+            type="primary"
+            @click="handleSearch"
+          >查询</el-button>
           <el-button @click="handleReset">重置</el-button>
         </el-form-item>
       </el-form>
-      <el-table :data="table" border stripe>
-        <el-table-column type="index" width="50" />
-        <el-table-column prop="name" label="名称" />
-        <el-table-column prop="status" label="状态" width="80">
+      <el-table
+        :data="table"
+        border
+        stripe
+      >
+        <el-table-column
+          type="index"
+          width="50"
+        />
+        <el-table-column
+          prop="name"
+          label="名称"
+        />
+        <el-table-column
+          prop="status"
+          label="状态"
+          width="80"
+        >
           <template #default="{ row: { status } }">
             {{ ["待修改", "待确认", "修改完成"][status] }}
           </template>
         </el-table-column>
-        <el-table-column prop="propose" label="提出人">
+        <el-table-column
+          prop="propose"
+          label="提出人"
+        >
           <template #default="{ row: { propose } }">
             {{ propose ? propose.name : "" }}
           </template>
         </el-table-column>
-        <el-table-column prop="solve" label="修改人">
+        <el-table-column
+          prop="solve"
+          label="修改人"
+        >
           <template #default="{ row: { solve } }">
             {{ solve ? solve.name : "" }}
           </template>
         </el-table-column>
-        <el-table-column prop="confirm" label="确认人">
+        <el-table-column
+          prop="confirm"
+          label="确认人"
+        >
           <template #default="{ row: { confirm } }">
             {{ confirm ? confirm.name : "" }}
           </template>
         </el-table-column>
         <el-table-column label="操作">
           <template #default="{ row }">
-            <el-button type="text" @click.stop="handleSee(row)">查看</el-button>
+            <el-button
+              type="text"
+              @click.stop="handleSee(row)"
+            >查看</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -176,9 +219,17 @@ export default {
       </div>
     </div>
     <div class="right">
-      <div v-if="!addScreen" class="handle-add">
-        <el-button plain @click.stop="addScreen = true">
-          <el-icon><Upload /></el-icon>
+      <div
+        v-if="!addScreen"
+        class="handle-add"
+      >
+        <el-button
+          plain
+          @click.stop="addScreen = true"
+        >
+          <el-icon>
+            <Upload />
+          </el-icon>
           <div>新增问题</div>
         </el-button>
       </div>
@@ -190,10 +241,20 @@ export default {
         :inline="false"
         label-width="70px"
       >
-        <el-form-item label="名称" prop="name">
-          <el-input v-model="form.name" placeholder="请输入" clearable />
+        <el-form-item
+          label="名称"
+          prop="name"
+        >
+          <el-input
+            v-model="form.name"
+            placeholder="请输入"
+            clearable
+          />
         </el-form-item>
-        <el-form-item label="描述" prop="describe">
+        <el-form-item
+          label="描述"
+          prop="describe"
+        >
           <el-input
             :rows="2"
             type="textarea"
@@ -202,10 +263,20 @@ export default {
             clearable
           />
         </el-form-item>
-        <el-form-item label="附件" prop="fileList">
-          <UploadFile v-model="form.fileList" url="/upload/img" />
+        <el-form-item
+          label="附件"
+          prop="fileList"
+        >
+          <UploadFile
+            v-model="form.fileList"
+            url="/upload/img"
+          />
         </el-form-item>
-        <el-form-item v-if="form.status == 1" label="处理方法" prop="treat">
+        <el-form-item
+          v-if="form.status == 1"
+          label="处理方法"
+          prop="treat"
+        >
           <el-input
             :rows="2"
             type="textarea"
@@ -216,7 +287,10 @@ export default {
         </el-form-item>
         <el-form-item>
           <el-button @click.stop="addScreen = false">取消</el-button>
-          <el-button type="primary" @click="handleSubmit">确认</el-button>
+          <el-button
+            type="primary"
+            @click="handleSubmit"
+          >确认</el-button>
         </el-form-item>
       </el-form>
     </div>

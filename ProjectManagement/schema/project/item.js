@@ -1,6 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const { getList, getDetail, addOne, updateOne, deleteOne } = require("../fn");
+const {
+  getList,
+  getDetail,
+  addOne,
+  updateOne,
+  deleteOne
+} = require("../fn");
 
 let projectItem = new Schema({
   id: { type: Number, required: true, index: true },
@@ -15,27 +21,50 @@ let projectItem = new Schema({
 
 projectItem.statics = {
   getList(option) {
-    const _option = { projectId: '', ...option }
-    const { projectId } = _option
+    const _option = {
+      projectId: '',
+      ...option
+    }
+    const {
+      projectId
+    } = _option
     let filter = {
       projectId
     }
-    return getList.call(this, _option, { filter })
+    return getList.call(this, _option, {
+      filter
+    })
   },
   getDetail(option) {
-    const { id } = option
+    const {
+      id
+    } = option
     return new Promise((r) => {
       this.find({ projectId: id, isDelete: false }).populate('personnel').populate('question')
         .sort({ 'id': 1 })
         .exec((err, doc) => {
           try {
             if (!err && doc) {
-              r({ status: 200, message: '数据请求成功', data: { list: doc } })
+              r({
+                status: 200,
+                message: '数据请求成功',
+                data: {
+                  list: doc
+                }
+              })
             } else {
-              r({ status: 203, message: err, data: doc })
+              r({
+                status: 203,
+                message: err,
+                data: doc
+              })
             }
           } catch (e) {
-            r({ status: 203, message: e, data: '' })
+            r({
+              status: 203,
+              message: e,
+              data: ''
+            })
           }
         })
     })
