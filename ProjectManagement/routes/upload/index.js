@@ -1,10 +1,20 @@
 const router = require('koa-router')()
 const formidable = require('formidable')
 const path = require("path")
+const fs = require('fs');
+const fsPromises = fs.promises;
 const config = require("../../config.js")
 // 上传封面
 router.post("/api/upload/img", upload('image'));
 router.post("/api/upload/video", upload('video'));
+
+const mv = async (sourcePath, destPath) => {
+  return fsPromises.rename(sourcePath, destPath);
+};
+
+const getType = (str) => {
+  return str.replace(/.+(?=\.)/g, '')
+}
 
 function upload(url) {
   return async function (ctx, next) {
@@ -18,18 +28,26 @@ function upload(url) {
     form.multiples = true;
     const files = await new Promise((resolve, reject) => {
       try {
-        form.parse(ctx.req, (err, fields, { file }) => {
+        form.parse(ctx.req, async (err, fields, { file }) => {
           try {
             if (err) { resolve([]); return; }
             if (Array.isArray(file)) {
-              const list = file.map(el => ({
-                fileName: el.newFilename,
-                filePath: el.filepath.replace(/.+(public)/g, "").replace(/(\\)/g, '/')
-              }))
+              const list = file.map(async el => {
+                const { filepath, newFilename, originalFilename } = el;
+                const _filePath = `${filepath}${getType(originalFilename)}`
+                await mv(filepath, _filePath)
+                return {
+                  fileName: newFilename,
+                  filePath: _filePath.replace(/.+(public)/g, "").replace(/(\\)/g, '/')
+                }
+              })
               resolve(list)
             } else {
-              const filePath = file.filepath.replace(/.+(public)/g, "").replace(/(\\)/g, '/');
-              resolve([{ fileName: file.newFilename, filePath }])
+              const { filepath, newFilename, originalFilename } = file;
+              const _filePath = `${filepath}${getType(originalFilename)}`
+              await mv(filepath, _filePath)
+              const filePath = _filePath.replace(/.+(public)/g, "").replace(/(\\)/g, '/');
+              resolve([{ fileName: newFilename, filePath }])
             }
           } catch (error) {
             resolve([])

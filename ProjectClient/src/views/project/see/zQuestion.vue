@@ -15,11 +15,11 @@ export default {
     Upload,
     UploadFile,
   },
-  setup(props) {
+  setup(props, content) {
     const {
       questionIds: { itemId, projectId },
     } = props;
-
+    const emit = content.emit;
     // 页面显示
     const addScreen = ref(false);
 
@@ -41,7 +41,6 @@ export default {
         status: "",
       },
     });
-    console.log(table);
 
     // // 新增、编辑、删除数据
     const formRef = ref(null);
@@ -75,7 +74,7 @@ export default {
             ...form.value,
             [personnel]: "629068c83f517a3de6d77310",
           };
-          submit(data).then(() => {
+          submit(data).then((data) => {
             form.value = {
               itemId,
               projectId,
@@ -86,6 +85,7 @@ export default {
               status: 0,
             };
             handleSearch();
+            emit("uploadItem", data);
           });
         } else {
           console.log("表单验证失败!", fields);

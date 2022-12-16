@@ -67,11 +67,10 @@ router.get('/api/userinfo', async (ctx, next) => {
   } catch (error) {
     ctx.body = {
       status: 201,
-      msg: '获取用户信息出错',
+      msg: `获取用户信息出错:${error}`,
       data: error
     }
   }
-  console.log(id)
   const data = await new Promise((r, reject) => {
     user.findOne({
       id

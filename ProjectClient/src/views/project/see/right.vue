@@ -1,3 +1,98 @@
+<template>
+  <div class="project-right">
+    <div>
+      <el-button type="primary" @click="handleShow">添加目录</el-button>
+      <el-button @click="handleRe">刷新</el-button>
+    </div>
+    <el-tree :data="tree">
+      <template #default="{ node, data }">
+        <span class="custom-tree-node">
+          <div class="tree-info">
+            <span>{{ node.label }}</span>
+          </div>
+          <div class="tree-edit" @click.stop>
+            <div class="personnel-list">
+              <!-- <div style="font-size: 13px">参与人员:</div> -->
+              <el-card
+                v-for="(i, j) in data.personnel"
+                :key="j"
+                shadow="always"
+                :body-style="{ padding: '0' }"
+              >
+                <el-tooltip
+                  class="box-item"
+                  :content="i.name"
+                  placement="top-start"
+                  effect="light"
+                >
+                  <el-image
+                    style="width: 20px; height: 20px"
+                    :src="i.avatar || ''"
+                    fit="cover"
+                  />
+                </el-tooltip>
+              </el-card>
+            </div>
+            <el-button
+              type="primary"
+              plain
+              @click.stop="handleAddQuestion(data)"
+            >
+              问题：22/31
+            </el-button>
+            <el-button type="primary" @click.stop="handleItemReAdd(data)">
+              添加
+            </el-button>
+            <el-button @click.stop="handleItemEdit(data)"> 编辑 </el-button>
+            <el-popconfirm
+              title="Are you sure to delete this?"
+              @confirm="handleItemDelete(data)"
+            >
+              <template #reference>
+                <el-button type="danger"> 删除 </el-button>
+              </template>
+            </el-popconfirm>
+          </div>
+        </span>
+      </template>
+    </el-tree>
+    <!-- 添加目录 -->
+    <el-dialog v-model="show" title="目录" width="400px">
+      <el-form :model="form" ref="itemRef" :rules="rules">
+        <el-form-item label="目录名称" prop="name">
+          <el-input v-model="form.name" placeholder="请输入" clearable />
+        </el-form-item>
+        <el-form-item label="负责人员">
+          <el-select
+            v-model="form.personnel"
+            placeholder="请选择"
+            clearable
+            filterable
+            multiple
+          >
+            <el-option
+              v-for="item in personnelList"
+              :key="item._id"
+              :label="item.name"
+              :value="item._id"
+            />
+          </el-select>
+        </el-form-item>
+      </el-form>
+      <template #footer>
+        <span class="dialog-footer">
+          <el-button @click="show = false">取消</el-button>
+          <el-button type="primary" @click="handleItemAdd">确认</el-button>
+        </span>
+      </template>
+    </el-dialog>
+    <!-- 添加问题 -->
+    <el-dialog title="问题" v-model="question" width="1200px">
+      <Question :questionIds="questionIds" @uploadItem="uploadItem" />
+    </el-dialog>
+  </div>
+</template>
+
 <script>
 import { reactive, ref, onMounted } from "vue";
 import { rulesT } from "tqr";
@@ -72,7 +167,6 @@ export default {
     };
 
     const handleItemReAdd = (data) => {
-      console.log(data);
       form.value = {
         ...form.value,
         parentId: data.id,
@@ -183,6 +277,9 @@ export default {
     });
     // 添加项目
 
+    // 更新问题
+    const uploadItem = (data) => {};
+
     return {
       personnelList,
       personnel,
@@ -200,105 +297,13 @@ export default {
       question,
       handleAddQuestion,
       questionIds,
+      uploadItem,
     };
   },
 };
 </script>
 
-<template>
-  <div class="project-right">
-    <div>
-      <el-button type="primary" @click="handleShow">添加目录</el-button>
-      <el-button @click="handleRe">刷新</el-button>
-    </div>
-    <el-tree :data="tree">
-      <template #default="{ node, data }">
-        <span class="custom-tree-node">
-          <div class="tree-info">
-            <span>{{ node.label }}</span>
-          </div>
-          <div class="tree-edit" @click.stop>
-            <div class="personnel-list">
-              <!-- <div style="font-size: 13px">参与人员:</div> -->
-              <el-card
-                v-for="(i, j) in data.personnel"
-                :key="j"
-                shadow="always"
-                :body-style="{ padding: '0' }"
-              >
-                <el-tooltip
-                  class="box-item"
-                  :content="i.name"
-                  placement="top-start"
-                  effect="light"
-                >
-                  <el-image
-                    style="width: 20px; height: 20px"
-                    :src="i.avatar || ''"
-                    fit="cover"
-                  />
-                </el-tooltip>
-              </el-card>
-            </div>
-            <el-button
-              type="primary"
-              plain
-              @click.stop="handleAddQuestion(data)"
-            >
-              问题：22/31
-            </el-button>
-            <el-button type="primary" @click.stop="handleItemReAdd(data)">
-              添加
-            </el-button>
-            <el-button @click.stop="handleItemEdit(data)"> 编辑 </el-button>
-            <el-popconfirm
-              title="Are you sure to delete this?"
-              @confirm="handleItemDelete(data)"
-            >
-              <template #reference>
-                <el-button type="danger"> 删除 </el-button>
-              </template>
-            </el-popconfirm>
-          </div>
-        </span>
-      </template>
-    </el-tree>
-    <!-- 添加目录 -->
-    <el-dialog v-model="show" title="目录" width="400px">
-      <el-form :model="form" ref="itemRef" :rules="rules">
-        <el-form-item label="目录名称" prop="name">
-          <el-input v-model="form.name" placeholder="请输入" clearable />
-        </el-form-item>
-        <el-form-item label="负责人员">
-          <el-select
-            v-model="form.personnel"
-            placeholder="请选择"
-            clearable
-            filterable
-            multiple
-          >
-            <el-option
-              v-for="item in personnelList"
-              :key="item._id"
-              :label="item.name"
-              :value="item._id"
-            />
-          </el-select>
-        </el-form-item>
-      </el-form>
-      <template #footer>
-        <span class="dialog-footer">
-          <el-button @click="show = false">取消</el-button>
-          <el-button type="primary" @click="handleItemAdd">确认</el-button>
-        </span>
-      </template>
-    </el-dialog>
-    <!-- 添加问题 -->
-    <el-dialog title="问题" v-model="question" width="1200px">
-      <Question :questionIds="questionIds" />
-    </el-dialog>
-  </div>
-</template>
+
 
 <style lang="scss" scoped>
 .project-right {
@@ -330,7 +335,7 @@ export default {
       }
     }
   }
-  ::v-deep .el-dialog {
+  :deep(.el-dialog) {
     .el-dialog__header {
       padding: 10px 20px;
       .el-dialog__headerbtn {

@@ -142,7 +142,7 @@ export default {
 
 <style lang="scss" scoped>
 .user {
-  ::v-deep(.el-overlay) {
+  :deep(.el-overlay) {
     .el-overlay-dialog {
       .el-dialog {
         .el-dialog__header {

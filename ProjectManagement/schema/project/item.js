@@ -5,9 +5,10 @@ const { getList, getDetail, addOne, updateOne, deleteOne } = require("../fn");
 let projectItem = new Schema({
   id: { type: Number, required: true, index: true },
   parentId: { type: Number, required: true, default: 0 },
-  projectId: { type: Number, required: true, default: 0 },
+  projectId: { type: Number, required: true },
   name: { type: String, required: true },
   personnel: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  question: [{ type: Schema.Types.ObjectId, ref: 'Question' }],
   isDelete: { type: Boolean, default: false },
   createTime: { type: Date, default: Date.now }
 })
@@ -24,7 +25,7 @@ projectItem.statics = {
   getDetail(option) {
     const { id } = option
     return new Promise((r) => {
-      this.find({ projectId: id, isDelete: false }).populate('personnel')
+      this.find({ projectId: id, isDelete: false }).populate('personnel').populate('question')
         .sort({ 'id': 1 })
         .exec((err, doc) => {
           try {
@@ -58,6 +59,36 @@ projectItem.statics = {
   deleteOne(option) {
     return deleteOne.call(this, option)
   },
+  // 问题新增的时候更新
+  uploadQuestion(id, q) {
+    return new Promise((r, reject) => {
+      this.findOne({ id, isDelete: false })
+        .sort({ 'id': 1 })
+        .exec((err, doc) => {
+          try {
+            if (!err && doc) {
+              const { question } = doc
+              this.update({ id }, { id, question: [...question, q] }).exec((err, doc) => {
+                try {
+                  if (!err && doc) {
+                    r({ status: 200, msg: '更新成功', data: doc })
+                  } else {
+                    r({ status: 203, msg: err, data: '' })
+                  }
+                } catch (e) {
+                  r({ status: 203, msg: e, data: '' })
+                }
+              })
+            } else {
+              r({ status: 203, message: err, data: doc })
+            }
+          } catch (e) {
+            r({ status: 203, message: e, data: '' })
+          }
+        })
+
+    })
+  }
 }
 
 

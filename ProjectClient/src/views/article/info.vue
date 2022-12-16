@@ -147,7 +147,7 @@ export default {
 <template>
   <div class="article-info">
     <el-scrollbar height="100%">
-      <el-form ref="formRef" :model="form" :rules="rules" label-width="120px">
+      <el-form ref="formRef" :model="form" :rules="rules" label-width="100px">
         <el-form-item label="封面" prop="cover">
           <Upload v-model="form.cover" url="/upload/img" one />
         </el-form-item>

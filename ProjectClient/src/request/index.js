@@ -32,12 +32,12 @@ service.interceptors.response.use(
     const res = response.data;
     if (res.status !== 200) {
       ElMessage({
-        message: res.msg || "错误代码" + res.status,
+        message: res.msg || "错误代码:" + res.status,
         type: 'error',
         showClose: true,
         duration: 5 * 1000
       })
-      return Promise.reject(res.msg || "错误代码" + res.code)
+      return Promise.reject(res.msg || "错误代码:" + res.code)
     } else {
       return res
     }

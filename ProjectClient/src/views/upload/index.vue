@@ -236,7 +236,7 @@ export default defineComponent({
       img {
         display: block;
       }
-      ::v-deep .image-slot {
+      :deep(.image-slot) {
         display: flex;
         width: 100%;
         padding: 0 6px;

@@ -92,7 +92,7 @@ const addOne = async function (option) {
       this.create(obj, (err, doc) => {
         try {
           if (!err && doc) {
-            r({ status: 200, message: '添加成功', data: '' })
+            r({ status: 200, message: '添加成功', data: doc })
           } else {
             r({ status: 203, message: err, data: doc })
           }

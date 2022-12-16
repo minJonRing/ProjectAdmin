@@ -7,6 +7,7 @@ import avatar from "@/assets/user.jpg";
 import { deleteToken } from "@/utils/token";
 import { ElNotification } from "element-plus";
 import { useRoute, useRouter } from "vue-router";
+import { ArrowDown, Operation } from "@element-plus/icons-vue";
 import { userType } from "@/zd";
 import {
   User,
@@ -20,6 +21,10 @@ import {
 
 export default {
   name: "App",
+  components: {
+    ArrowDown,
+    Operation,
+  },
   computed: {
     ...mapGetters(["loading", "userInfo"]),
     returnUserType() {
@@ -82,41 +87,76 @@ export default {
           </div>
         </el-space>
         <!-- 项目进程 -->
-        <el-space v-if="userInfo.name" size="large" class="user">
-          <div class="user-project">
-            <router-link class="item" to="/article/list">
-              <el-tooltip content="文章" placement="top" effect="light">
-                <el-button :icon="Reading" />
-              </el-tooltip>
-            </router-link>
-            <router-link class="item" to="/user">
-              <el-tooltip content="用户" placement="top" effect="light">
-                <el-button :icon="User" />
-              </el-tooltip>
-            </router-link>
-            <el-badge :value="12" class="item">
-              <router-link to="/project/list">
-                <el-button :icon="Search"> 全部项目 </el-button>
-              </router-link>
-            </el-badge>
-            <el-badge :value="12" class="item">
-              <el-button type="primary" :icon="Star">进行中项目</el-button>
-            </el-badge>
-            <el-badge :value="12" class="item">
-              <el-button type="success" :icon="CircleCheckFilled"
-                >完成项目</el-button
-              >
-            </el-badge>
-          </div>
-          <!-- 用户操作 -->
-          <div class="user-edit">
-            <el-popconfirm title="确定退出登录?" @confirm="handleOut">
-              <template #reference>
-                <el-button type="danger" :icon="SwitchButton" />
+        <el-row>
+          <el-col hidden-sm-only :xs="0" :sm="24">
+            <el-space v-if="userInfo.name" size="large" class="user">
+              <div class="user-project">
+                <router-link class="item" to="/article/list">
+                  <el-tooltip content="文章" placement="top" effect="light">
+                    <el-button :icon="Reading" />
+                  </el-tooltip>
+                </router-link>
+                <router-link class="item" to="/user">
+                  <el-tooltip content="用户" placement="top" effect="light">
+                    <el-button :icon="User" />
+                  </el-tooltip>
+                </router-link>
+                <el-badge :value="12" class="item">
+                  <router-link to="/project/list">
+                    <el-button type="primary" :icon="Search">
+                      我的项目
+                    </el-button>
+                  </router-link>
+                </el-badge>
+              </div>
+              <!-- 用户操作 -->
+              <div class="user-edit">
+                <el-popconfirm title="确定退出登录?" @confirm="handleOut">
+                  <template #reference>
+                    <el-button type="danger" :icon="SwitchButton" />
+                  </template>
+                </el-popconfirm>
+              </div>
+            </el-space>
+          </el-col>
+          <el-col :sm="0" :xs="24">
+            <el-dropdown>
+              <span class="el-dropdown-link">
+                <el-icon style="font-size: 30px">
+                  <Operation />
+                </el-icon>
+                <el-icon class="el-icon--right">
+                  <ArrowDown />
+                </el-icon>
+              </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item>
+                    <router-link class="item" to="/article/list">
+                      <el-button text :icon="Reading">文章</el-button>
+                    </router-link>
+                  </el-dropdown-item>
+                  <el-dropdown-item divided>
+                    <router-link to="/project/list">
+                      <el-button type="primary" text :icon="Search">
+                        我的项目
+                      </el-button>
+                    </router-link>
+                  </el-dropdown-item>
+                  <el-dropdown-item divided>
+                    <el-button
+                      type="danger"
+                      text
+                      :icon="SwitchButton"
+                      @confirm="handleOut"
+                      >退出</el-button
+                    >
+                  </el-dropdown-item>
+                </el-dropdown-menu>
               </template>
-            </el-popconfirm>
-          </div>
-        </el-space>
+            </el-dropdown>
+          </el-col>
+        </el-row>
       </el-card>
     </el-header>
     <el-main class="layout-main" v-loading="loading">
@@ -135,14 +175,14 @@ export default {
   background-color: #f8f8f8;
   .layout-head {
     height: auto;
-    padding: 12px;
+    padding: 0;
 
     .el-card {
       // background-image: url("./assets/banner.jpg");
       // background-repeat: no-repeat;
       // background-size: cover;
       // background-position: center center;
-      ::v-deep(.el-card__body) {
+      :deep(.el-card__body) {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -166,11 +206,11 @@ export default {
     }
   }
   .layout-main {
-    padding: 0 12px 12px;
+    padding: 12px 0 0;
     overflow: hidden;
     .el-card {
       height: 100%;
-      ::v-deep(.el-card__body) {
+      :deep(.el-card__body) {
         height: 100%;
         box-sizing: border-box;
       }

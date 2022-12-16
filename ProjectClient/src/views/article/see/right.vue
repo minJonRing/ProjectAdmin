@@ -330,7 +330,7 @@ export default {
       }
     }
   }
-  ::v-deep .el-dialog {
+  :deep(.el-dialog) {
     .el-dialog__header {
       padding: 10px 20px;
       .el-dialog__headerbtn {

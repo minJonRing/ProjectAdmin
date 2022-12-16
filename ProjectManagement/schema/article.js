@@ -34,6 +34,7 @@ article.statics = {
     const {
       id,
       title,
+      cover,
       type,
       cont,
       avatar,
@@ -41,6 +42,7 @@ article.statics = {
     const _option = {
       id,
       title,
+      cover,
       type,
       cont,
       avatar,

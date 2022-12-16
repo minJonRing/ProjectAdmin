@@ -75,7 +75,14 @@ router.get('/question/path/:id', async (ctx, next) => {
 router.post('/question/path', async (ctx, next) => {
   await next()
   const data = await question.addOne(ctx.request.body)
-  ctx.body = data
+  if (data.status === 200) {
+    const { itemId, _id } = data.data
+    const _data = await projectItem.uploadQuestion(itemId, _id)
+    ctx.body = _data
+  } else {
+    ctx.body = data
+  }
+
 })
 router.put('/question/path/:id', async (ctx, next) => {
   await next()
